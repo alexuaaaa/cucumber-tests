@@ -12,25 +12,25 @@ Feature: Register a patient
       | given | middle | familyName |
       | Alex  | Andrei | Albu       |
       | Maria | Ana    | Popescu    |
-#    And The gender is provided
-#      | Gender |
-#      | Male   |
-#      | Female |
-#    And The birthday is set
-#      | Day | Year |
-#      | 10  | 1990 |
-#      | 20  | 1991 |
-#    And User will send the address
-#      | Address   |
-#      | Cluj      |
-#      | Bucuresti |
-#    And User will provide the telephone
-#      | Phone      |
-#      | 0734364811 |
-#      | 0745443533 |
-#    And User will send the patient related to
-#      | Relation Type | Person name |
-#      | Doctor        | Alex        |
-#      | Parent        | Maria       |
-#    And User will press confirm
-#    And Page With User Information will appear
+    And The gender is provided
+      | Gender |
+      | Male   |
+      | Female |
+    And The birthday is set
+      | Day | Year |
+      | 10  | 1990 |
+      | 20  | 1991 |
+    And User will send the address
+      | Address   |
+      | Cluj      |
+      | Bucuresti |
+    And User will provide the telephone
+      | Phone      |
+      | 0734364811 |
+      | 0745443533 |
+    And User will send the patient related to
+      | Relation Type | Person name |
+      | Doctor        | Alex        |
+      | Parent        | Maria       |
+    And User will press confirm
+    And Page With User Information will appear
