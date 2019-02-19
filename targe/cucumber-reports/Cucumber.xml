@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="17.177566">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="7.248462">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Isolation Ward".......................................passed
+Then User is logged in with success.........................................passed
+And Message with logged In appears having "Isolation Ward"..................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="2.016363">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Laboratory"...........................................passed
+Then User is logged in with success.........................................passed
+And Message with logged In appears having "Laboratory"......................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="2.002582">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Outpatient Clinic"....................................passed
+Then User is logged in with success.........................................passed
+And Message with logged In appears having "Outpatient Clinic"...............passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="2.020001">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Pharmacy".............................................passed
+Then User is logged in with success.........................................passed
+And Message with logged In appears having "Pharmacy"........................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="1.964362">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Registration Desk"....................................passed
+Then User is logged in with success.........................................passed
+And Message with logged In appears having "Registration Desk"...............passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="2. When user press Logout then the page will return to login" time="1.925796">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Inpatient Ward".......................................passed
+Then User is logged in with success.........................................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
