@@ -1,43 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="8.476133">
-<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="8.476133">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;fr6776-field&quot;]&quot;}&#10;  (Session info: chrome=72.0.3626.109)&#10;  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'&#10;System info: host: 'ALEX-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_40'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\alex\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51200}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}&#10;Session ID: 56bfd1e438924c4ea7b7254d35674d78&#10;*** Element info: {Using=xpath, value=//*[@id=&quot;fr6776-field&quot;]}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)&#13;&#10;&#9;at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)&#13;&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)&#13;&#10;&#9;at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)&#13;&#10;&#9;at cucumber.steps.RegisterPatientThenStepsDef.theNameOfThePatientIsProvided(RegisterPatientThenStepsDef.java:23)&#13;&#10;&#9;at ✽.And The name of the patient is provided(RegisterPatient.feature:11)&#13;&#10;"><![CDATA[Given The URL application is accessed with success..........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="27.776719">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="4.059242">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Isolation Ward".......................................passed
+Then Login button is pressed................................................passed
+And Message with logged In appears having "Isolation Ward"..................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="1.936979">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Laboratory"...........................................passed
+Then Login button is pressed................................................passed
+And Message with logged In appears having "Laboratory"......................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="1.850887">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Outpatient Clinic"....................................passed
+Then Login button is pressed................................................passed
+And Message with logged In appears having "Outpatient Clinic"...............passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="1.917392">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Pharmacy".............................................passed
+Then Login button is pressed................................................passed
+And Message with logged In appears having "Pharmacy"........................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="1.969113">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Registration Desk"....................................passed
+Then Login button is pressed................................................passed
+And Message with logged In appears having "Registration Desk"...............passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="2. When user press Logout then the page will return to login" time="1.792064">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the valid credentials.....................................passed
+And User is send one "Inpatient Ward".......................................passed
+Then Login button is pressed................................................passed
+And Logout button will be clicked...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned" time="1.112409">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the invalid "test" and invalid "test" credentials.........passed
+And User is send one "Inpatient Ward".......................................passed
+And Login button is pressed.................................................passed
+Then Invalid message with invalid user/pass is returned.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 2" time="1.120733">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the invalid "Admin" and invalid "test" credentials........passed
+And User is send one "Inpatient Ward".......................................passed
+And Login button is pressed.................................................passed
+Then Invalid message with invalid user/pass is returned.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 3" time="1.114069">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the invalid "test" and invalid "Admin123" credentials.....passed
+And User is send one "Inpatient Ward".......................................passed
+And Login button is pressed.................................................passed
+Then Invalid message with invalid user/pass is returned.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 4" time="1.137748">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the invalid "@#$#" and invalid "Admin123" credentials.....passed
+And User is send one "Inpatient Ward".......................................passed
+And Login button is pressed.................................................passed
+Then Invalid message with invalid user/pass is returned.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 5" time="1.099308">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
+When User is send the invalid "Admin" and invalid "@#$#" credentials........passed
+And User is send one "Inpatient Ward".......................................passed
+And Login button is pressed.................................................passed
+Then Invalid message with invalid user/pass is returned.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="8.666775">
+<system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Inpatient Ward".......................................passed
 Then Login button is pressed................................................passed
 And Register a patient button is sent.......................................passed
-And The name of the patient is provided.....................................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="fr6776-field"]"}
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ALEX-PC', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\alex\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51200}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: 56bfd1e438924c4ea7b7254d35674d78
-*** Element info: {Using=xpath, value=//*[@id="fr6776-field"]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at cucumber.steps.RegisterPatientThenStepsDef.theNameOfThePatientIsProvided(RegisterPatientThenStepsDef.java:23)
-	at ✽.And The name of the patient is provided(RegisterPatient.feature:11)
-]]></failure>
+And The PatientDetails are set..............................................passed
+And The gender is provided..................................................passed
+And The birthday is set.....................................................passed
+And User will send the address "Bucuresti"..................................passed
+And User will provide the telephone "0734364811"............................passed
+And User will send the patient related to...................................passed
+And User will press confirm.................................................passed
+And Page With User Information will appear..................................passed
+]]></system-out>
 </testcase>
 </testsuite>

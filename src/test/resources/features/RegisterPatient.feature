@@ -8,29 +8,21 @@ Feature: Register a patient
     And  User is send one "Inpatient Ward"
     Then Login button is pressed
     And Register a patient button is sent
-    And The name of the patient is provided
-      | given | middle | familyName |
+    And The PatientDetails are set
+      | Given | Middle | FamilyName |
       | Alex  | Andrei | Albu       |
-      | Maria | Ana    | Popescu    |
     And The gender is provided
-      | Gender |
-      | Male   |
-      | Female |
+      | Gender | Path                              |
+      | Male   | //*[@id="gender-field"]/option[1] |
     And The birthday is set
       | Day | Year |
       | 10  | 1990 |
-      | 20  | 1991 |
-    And User will send the address
-      | Address   |
-      | Cluj      |
-      | Bucuresti |
-    And User will provide the telephone
-      | Phone      |
-      | 0734364811 |
-      | 0745443533 |
+    And User will send the address "Bucuresti"
+    And User will provide the telephone "0734364811"
     And User will send the patient related to
-      | Relation Type | Person name |
-      | Doctor        | Alex        |
-      | Parent        | Maria       |
+      | PersonName |
+      | Alexandru  |
+      | \' \'      |
+      | Albu       |
     And User will press confirm
     And Page With User Information will appear
