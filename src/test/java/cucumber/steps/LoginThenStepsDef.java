@@ -4,6 +4,8 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.testng.Assert;
 
+import static cucumber.Asserter.asserterDisplayedHomeButtons;
+import static cucumber.Asserter.asserterPages;
 import static cucumber.Base.getElementType;
 import static cucumber.Constants.*;
 
@@ -12,6 +14,16 @@ public class LoginThenStepsDef {
     @Then("^Login button is pressed$")
     public static void userIsLoggedInWithSuccess() {
         getElementType(LOGIN_BUTTON).click();
+
+        asserterPages(HOME_PAGE);
+        asserterDisplayedHomeButtons();
+    }
+
+    @And("^Login button is pressed without verifying home page$")
+    public static void logButtonIsPressedWithoutVerifyingHomePage() {
+        getElementType(LOGIN_BUTTON).click();
+
+        asserterPages(LOGIN_PAGE);
     }
 
     @And("^Message with logged In appears having \"(.*)\"$")

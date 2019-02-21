@@ -1,8 +1,11 @@
 package cucumber;
 
-import cucumber.tests.OpenMRSTests;
+import cucumber.runner.OpenMRSTests;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Base extends OpenMRSTests {
 
@@ -28,18 +31,28 @@ public class Base extends OpenMRSTests {
     public static void verifyFieldText(String field, String value) {
     }
 
-    public String getCurrentPage() {
+     static String getCurrentPage() {
         String url = driver.getCurrentUrl();
         String page = "";
 
-        if (url.contains("my-account"))
-            page = "User";
-        else if (url.contains("controller=contact"))
-            page = "Contact";
-        else
-            page = "Home";
-
+        if (url.contains("login.htm")) {
+            page = "Login";
+        } else if (url.contains("home.page")) {
+            page = "HomePage";
+        } else if (url.contains(("registerPatient"))) {
+            page = "RegisterPatient";
+        } else if (url.contains("patient.page")) {
+            page = "PatientPage";
+        } else if (url.contains("login.page")) {
+            page = "Login";
+        } else {
+            page = "Not found";
+        }
         return page;
     }
 
+    public static void waitForElementOrPageDisplay(WebDriver driver, String locator, Integer timeOut) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+    }
 }

@@ -1,4 +1,4 @@
-package cucumber.tests;
+package cucumber.runner;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;

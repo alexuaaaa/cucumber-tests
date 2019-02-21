@@ -3,23 +3,23 @@ package cucumber.steps;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.classObjects.PatientDetails;
-import cucumber.tests.OpenMRSTests;
-import org.openqa.selenium.By;
+import cucumber.runner.OpenMRSTests;
 import org.testng.Assert;
 
 import java.util.List;
-import java.util.Map;
 
+import static cucumber.Asserter.asserterPages;
 import static cucumber.Base.getElementType;
-import static cucumber.Base.verifyFieldText;
+import static cucumber.Base.waitForElementOrPageDisplay;
 import static cucumber.Constants.*;
-import static cucumber.classObjects.PatientDetails.waitForElementOrPageDisplay;
 
 public class RegisterPatientThenStepsDef {
 
     @And("^Register a patient button is sent$")
     public static void registerAPatientButtonIsSent() {
         getElementType(REGISTER_A_PATIENT_BUTTON).click();
+
+        asserterPages(REGISTER_PAGE);
     }
 
     @And("^The PatientDetails are set$")

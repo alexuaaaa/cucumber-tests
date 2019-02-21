@@ -33,5 +33,18 @@ public class Constants {
     public static final String SUBMIT_BUTTON_ID = "submit";
     public static final String CONFIRM_BUTTON_XPATH = "//*[@id=\"confirmation_label\"]";
     public static final String GENERAL_ACTIONS_XPATH = "//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3";
+    public static final String LOGIN_PAGE = "Login";
+    public static final String REGISTER_PAGE = "RegisterPatient";
+    public static final String HOME_PAGE = "HomePage";
+    public static final String FIND_PATIENT_RECORD = "//*[@id=\"coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension\"]";
+    public static final String ACTIVE_VISITS = "//*[@id=\"org-openmrs-module-coreapps-activeVisitsHomepageLink-org-openmrs-module-coreapps-activeVisitsHomepageLink-extension\"]";
+    public static final String REGISTER_A_PATIENT = "//*[@id=\"referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension\"]";
+    public static final String CAPTURE_VITALS = "//*[@id=\"referenceapplication-vitals-referenceapplication-vitals-extension\"]";
+    public static final String APPOINTMENT_SCHEDULE = "//*[@id=\"appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension\"]";
+    public static final String REPORTS = "//*[@id=\"reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension\"]";
+    public static final String DATA_MANAGEMENT = "//*[@id=\"coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension\"]";
+    public static final String CONFIGURE_METADATA = "//*[@id=\"org-openmrs-module-adminui-configuremetadata-homepageLink-org-openmrs-module-adminui-configuremetadata-homepageLink-extension\"]";
+    public static final String SYSTEM_ADMIN = "//*[@id=\"coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension\"]";
+
 
 }

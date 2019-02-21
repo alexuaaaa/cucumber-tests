@@ -28,9 +28,4 @@ public class PatientDetails {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
-    public static void waitForElementOrPageDisplay(WebDriver driver, String locator, Integer timeOut) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-    }
 }
