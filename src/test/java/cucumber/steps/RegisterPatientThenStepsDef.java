@@ -8,7 +8,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.Map;
 
+import static cucumber.Base.getElementType;
+import static cucumber.Base.verifyFieldText;
 import static cucumber.Constants.*;
 import static cucumber.classObjects.PatientDetails.waitForElementOrPageDisplay;
 
@@ -16,7 +19,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^Register a patient button is sent$")
     public static void registerAPatientButtonIsSent() {
-        OpenMRSTests.driver.findElement(By.xpath(REGISTER_A_PATIENT_BUTTON)).click();
+        getElementType(REGISTER_A_PATIENT_BUTTON).click();
     }
 
     @And("^The PatientDetails are set$")
@@ -24,28 +27,28 @@ public class RegisterPatientThenStepsDef {
         List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
 
         for (PatientDetails detailsPatient : patientDetails) {
-            OpenMRSTests.driver.findElement(By.name(GIVEN_BUTTON)).sendKeys(detailsPatient.given);
-            OpenMRSTests.driver.findElement(By.name(MIDDLE_BUTTON)).sendKeys(detailsPatient.middle);
-            OpenMRSTests.driver.findElement(By.name(FAMILY_NAME_BUTTON)).sendKeys(detailsPatient.familyName);
+            getElementType(GIVEN_BUTTON).sendKeys(detailsPatient.given);
+            getElementType(MIDDLE_BUTTON).sendKeys(detailsPatient.middle);
+            getElementType(FAMILY_NAME_BUTTON).sendKeys(detailsPatient.familyName);
         }
 
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.name(GIVEN_BUTTON)).isDisplayed());
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.name(MIDDLE_BUTTON)).isDisplayed());
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.name(FAMILY_NAME_BUTTON)).isDisplayed());
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.xpath(GENDER_BUTTON)).isDisplayed());
+        Assert.assertTrue(getElementType(GIVEN_BUTTON).isDisplayed());
+        Assert.assertTrue(getElementType(MIDDLE_BUTTON).isDisplayed());
+        Assert.assertTrue(getElementType((FAMILY_NAME_BUTTON)).isDisplayed());
+        Assert.assertTrue(getElementType((GENDER_BUTTON)).isDisplayed());
 
-        OpenMRSTests.driver.findElement(By.xpath(GENDER_BUTTON)).click();
+        getElementType(GENDER_BUTTON).click();
     }
 
     @And("^The gender is provided$")
     public static void theGenderIsProvided(List<PatientDetails> patientDetailsList) {
         for (PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.xpath(patientDetails.path)).click();
+            getElementType(patientDetails.path).click();
         }
 
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.id(BIRTHDAY_ID)).isDisplayed());
+        Assert.assertTrue(getElementType((BIRTHDAY_ID)).isDisplayed());
 
-        OpenMRSTests.driver.findElement(By.id(BIRTHDAY_ID)).click();
+        getElementType((BIRTHDAY_ID)).click();
     }
 
     @And("^The birthday is set$")
@@ -53,49 +56,60 @@ public class RegisterPatientThenStepsDef {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
         for (PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.id(DAY_ID)).sendKeys(patientDetails.day);
-            OpenMRSTests.driver.findElement(By.id(YEAR_ID)).sendKeys(patientDetails.year);
+            getElementType(DAY_ID).sendKeys(patientDetails.day);
+            getElementType(YEAR_ID).sendKeys(patientDetails.year);
         }
 
-        Assert.assertTrue(OpenMRSTests.driver.findElement(By.id(MONTH_ID)).isDisplayed());
+        Assert.assertTrue(getElementType(MONTH_ID).isDisplayed());
 
-        OpenMRSTests.driver.findElement(By.id(MONTH_ID)).click();
-        OpenMRSTests.driver.findElement(By.xpath(JANUARY_PATH)).click();
-        OpenMRSTests.driver.findElement(By.xpath(ADDRESS_PATH)).click();
+        getElementType(MONTH_ID).click();
+        getElementType(JANUARY_PATH).click();
+        getElementType(ADDRESS_PATH).click();
     }
 
     @And("^User will send the address \"(.*)\"$")
     public static void userWillSendTheAddress(String address) {
-        OpenMRSTests.driver.findElement(By.id(ADDRESS_PATIENT_ID)).sendKeys(address);
-        OpenMRSTests.driver.findElement(By.xpath(PHONE_PATH)).click();
+        getElementType((ADDRESS_PATIENT_ID)).sendKeys(address);
+        getElementType(PHONE_PATH).click();
     }
 
     @And("^User will provide the telephone \"(.*)\"$")
     public static void userWillProvideTheTelephone(Integer telephone) {
-        OpenMRSTests.driver.findElement(By.name(PHONE_NUMBER)).sendKeys(String.valueOf(telephone));
-        OpenMRSTests.driver.findElement(By.xpath(RELATIVE_PATH)).click();
+        getElementType(PHONE_NUMBER).sendKeys(String.valueOf(telephone));
+        getElementType(RELATIVE_PATH).click();
     }
 
     @And("^User will send the patient related to$")
     public static void userWillSendThePatientRelatedTo(DataTable table) {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
-        OpenMRSTests.driver.findElement(By.id(PATIENT_TYPE_ID)).click();
-        OpenMRSTests.driver.findElement(By.xpath(PATIENT_DOCTOR)).click();
+        getElementType(PATIENT_TYPE_ID).click();
+        getElementType(PATIENT_DOCTOR).click();
 
         for (PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.xpath(PERSONAL_NAME_PATH)).sendKeys(patientDetails.personName);
+            getElementType(PERSONAL_NAME_PATH).sendKeys(patientDetails.lastName);
+            getElementType(PERSONAL_NAME_PATH).sendKeys(" " + patientDetails.firstName);
         }
-        OpenMRSTests.driver.findElement(By.xpath(CONFIRM_BUTTON_XPATH)).click();
+        getElementType(CONFIRM_BUTTON_XPATH).click();
     }
 
     @And("^User will press confirm$")
     public void userWillPressConfirm() {
-        OpenMRSTests.driver.findElement(By.id(SUBMIT_BUTTON_ID)).click();
+        getElementType(SUBMIT_BUTTON_ID).click();
     }
 
     @And("^Page With User Information will appear$")
     public void pageWithUserInformationWillAppear() {
         waitForElementOrPageDisplay(OpenMRSTests.driver, GENERAL_ACTIONS_XPATH, 5);
     }
+
+//    @And("^The page contains the following data:$")
+//    public void pageContainsData(DataTable data) {
+//        List<Map<String, String>> content = data.asMaps(String.class, String.class);
+//
+//        for (Map<String, String> row : content) {
+//            verifyFieldText(row.get("Field"), row.get("Value"));
+//        }
+//    }
+
 }

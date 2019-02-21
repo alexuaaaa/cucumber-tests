@@ -20,9 +20,9 @@ Feature: Register a patient
     And User will send the address "Bucuresti"
     And User will provide the telephone "0734364811"
     And User will send the patient related to
-      | PersonName |
-      | Alexandru  |
-      | \' \'      |
-      | Albu       |
+      | LastName | FirstName |
+      | Albu     | Alexandru |
     And User will press confirm
     And Page With User Information will appear
+#    And The page contains the following data
+#    |||

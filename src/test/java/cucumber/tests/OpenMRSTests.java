@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
-        tags = {"@RegisterPatient"},/*tags means that specific feature is tested, or scenario*/
+//        tags = {"@Login"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         /*monochrome = true displays the output in a readable format*/
         format = // generate format report

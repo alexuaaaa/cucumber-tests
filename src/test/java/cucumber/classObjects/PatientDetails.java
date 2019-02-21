@@ -14,9 +14,10 @@ public class PatientDetails {
     public String day;
     public String year;
     public String path;
-    public String personName;
+    public String lastName;
+    public String firstName;
 
-    public void PatientDetails(String given, String middle, String familyName, String gender, String day, String year, String path, String personName) {
+    public void PatientDetails(String given, String middle, String familyName, String gender, String day, String year, String path, String firstName, String lastName) {
         this.given = given;
         this.middle = middle;
         this.familyName = familyName;
@@ -24,7 +25,8 @@ public class PatientDetails {
         this.day = day;
         this.year = year;
         this.path = path;
-        this.personName = personName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public static void waitForElementOrPageDisplay(WebDriver driver, String locator, Integer timeOut) {
