@@ -7,7 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class Base extends OpenMRSTests {
+
+
+//    public String getLocator(String className, String elementName) throws ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException, NoSuchMethodException, SecurityException {
+//        Class<?> cls = Class.forName("com.pb.cucumberdemo.pageobjs." + className + "_Objs");
+//        Method findLocator = cls.getMethod("findLocator", String.class);
+//
+//        String locator = (String) findLocator.invoke(cls.getDeclaredConstructor().newInstance(), elementName);
+//
+//        return locator;
+//    }
 
     public static WebElement getElementType(String locator) {
         WebElement element;
@@ -31,7 +44,7 @@ public class Base extends OpenMRSTests {
     public static void verifyFieldText(String field, String value) {
     }
 
-     static String getCurrentPage() {
+    static String getCurrentPage() {
         String url = driver.getCurrentUrl();
         String page = "";
 

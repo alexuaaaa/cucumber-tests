@@ -4,7 +4,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -30,15 +31,20 @@ public class OpenMRSTests {
 
     @BeforeClass
     public void setUP() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.setCapability("marionette", false);
+        driver = new FirefoxDriver(options);
+
         driver.manage().window().maximize();
 
         testRunner = new TestNGCucumberRunner(OpenMRSTests.class);
     }
 
-    @Test( dataProvider = "features")
+    @Test(dataProvider = "features")
     public void runFeatures(CucumberFeatureWrapper cFeature) {
         testRunner.runCucumber(cFeature.getCucumberFeature());
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="35.821622">
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="4.831742">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="52.198884">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="6.970265">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Isolation Ward".......................................passed
@@ -9,7 +9,7 @@ And Message with logged In appears having "Isolation Ward"..................pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="2.517261">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="5.692613">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Laboratory"...........................................passed
@@ -18,7 +18,7 @@ And Message with logged In appears having "Laboratory"......................pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="2.315835">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="4.891183">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Outpatient Clinic"....................................passed
@@ -27,7 +27,7 @@ And Message with logged In appears having "Outpatient Clinic"...............pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="2.258492">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="3.779212">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Pharmacy".............................................passed
@@ -36,7 +36,7 @@ And Message with logged In appears having "Pharmacy"........................pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="2.254241">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="3.500913">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Registration Desk"....................................passed
@@ -45,7 +45,7 @@ And Message with logged In appears having "Registration Desk"...............pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="2. When user press Logout then the page will return to login" time="2.270274">
+<testcase classname="Login form of the application" name="2. When user press Logout then the page will return to login" time="3.168603">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Inpatient Ward".......................................passed
@@ -53,7 +53,7 @@ Then Login button is pressed................................................pass
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned" time="1.118557">
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned" time="1.620625">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the invalid "test" and invalid "test" credentials.........passed
 And User is send one "Inpatient Ward".......................................passed
@@ -61,7 +61,7 @@ And Login button is pressed without verifying home page.....................pass
 Then Invalid message with invalid user/pass is returned.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 2" time="1.13958">
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 2" time="1.824525">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the invalid "Admin" and invalid "test" credentials........passed
 And User is send one "Inpatient Ward".......................................passed
@@ -69,7 +69,7 @@ And Login button is pressed without verifying home page.....................pass
 Then Invalid message with invalid user/pass is returned.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 3" time="1.119579">
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 3" time="1.602172">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the invalid "test" and invalid "Admin123" credentials.....passed
 And User is send one "Inpatient Ward".......................................passed
@@ -77,7 +77,7 @@ And Login button is pressed without verifying home page.....................pass
 Then Invalid message with invalid user/pass is returned.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 4" time="1.160625">
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 4" time="1.601195">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the invalid "@#$#" and invalid "Admin123" credentials.....passed
 And User is send one "Inpatient Ward".......................................passed
@@ -85,7 +85,7 @@ And Login button is pressed without verifying home page.....................pass
 Then Invalid message with invalid user/pass is returned.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 5" time="1.230765">
+<testcase classname="Login form of the application" name="3. When user is login with invalid credentials then invalid message is returned 5" time="1.823919">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the invalid "Admin" and invalid "@#$#" credentials........passed
 And User is send one "Inpatient Ward".......................................passed
@@ -93,7 +93,7 @@ And Login button is pressed without verifying home page.....................pass
 Then Invalid message with invalid user/pass is returned.....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="13.604671">
+<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="15.723659">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid credentials.....................................passed
 And User is send one "Inpatient Ward".......................................passed

@@ -165,14 +165,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 2258424079,
+  "duration": 2284161462,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 254571189,
+  "duration": 271755673,
   "status": "passed"
 });
 formatter.match({
@@ -185,14 +185,14 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 99186018,
+  "duration": 149759355,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 1393352163,
+  "duration": 2655176705,
   "status": "passed"
 });
 formatter.match({
@@ -205,14 +205,14 @@ formatter.match({
   "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
 });
 formatter.result({
-  "duration": 50231665,
+  "duration": 45415768,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 775976532,
+  "duration": 1563995801,
   "status": "passed"
 });
 formatter.scenario({
@@ -273,14 +273,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 313339505,
+  "duration": 619612958,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 163499329,
+  "duration": 158506824,
   "status": "passed"
 });
 formatter.match({
@@ -293,14 +293,14 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 85351111,
+  "duration": 533520347,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 1045042880,
+  "duration": 2520529997,
   "status": "passed"
 });
 formatter.match({
@@ -313,14 +313,14 @@ formatter.match({
   "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
 });
 formatter.result({
-  "duration": 38014030,
+  "duration": 705584123,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 872014386,
+  "duration": 1154858767,
   "status": "passed"
 });
 formatter.scenario({
@@ -381,14 +381,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 309810755,
+  "duration": 568639366,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 174242090,
+  "duration": 709233891,
   "status": "passed"
 });
 formatter.match({
@@ -401,14 +401,14 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 96367979,
+  "duration": 225626201,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 1009339300,
+  "duration": 3195507386,
   "status": "passed"
 });
 formatter.match({
@@ -421,14 +421,14 @@ formatter.match({
   "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
 });
 formatter.result({
-  "duration": 36305674,
+  "duration": 65417008,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 689769319,
+  "duration": 126759618,
   "status": "passed"
 });
 formatter.scenario({
@@ -489,14 +489,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 306389766,
+  "duration": 889836028,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 161775578,
+  "duration": 199621125,
   "status": "passed"
 });
 formatter.match({
@@ -509,14 +509,14 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 99906564,
+  "duration": 120062177,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 943407433,
+  "duration": 1544804052,
   "status": "passed"
 });
 formatter.match({
@@ -529,14 +529,14 @@ formatter.match({
   "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
 });
 formatter.result({
-  "duration": 35657397,
+  "duration": 47012942,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 711355332,
+  "duration": 977876036,
   "status": "passed"
 });
 formatter.scenario({
@@ -597,14 +597,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 300361128,
+  "duration": 583739184,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 160226298,
+  "duration": 147626796,
   "status": "passed"
 });
 formatter.match({
@@ -617,14 +617,14 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 97322434,
+  "duration": 101505876,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 954742453,
+  "duration": 1660415522,
   "status": "passed"
 });
 formatter.match({
@@ -637,14 +637,14 @@ formatter.match({
   "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
 });
 formatter.result({
-  "duration": 36267188,
+  "duration": 42932985,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 705321134,
+  "duration": 964692828,
   "status": "passed"
 });
 formatter.scenario({
@@ -690,14 +690,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 301828305,
+  "duration": 556533341,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 160242548,
+  "duration": 183710961,
   "status": "passed"
 });
 formatter.match({
@@ -710,21 +710,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 98326067,
+  "duration": 121821848,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 951227815,
+  "duration": 1244896205,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logoutButtonWillBeClicked()"
 });
 formatter.result({
-  "duration": 758649651,
+  "duration": 1061641091,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -874,7 +874,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 306580059,
+  "duration": 547419826,
   "status": "passed"
 });
 formatter.match({
@@ -891,7 +891,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userAndPasswordAreSendWithInvalidValues(String,String)"
 });
 formatter.result({
-  "duration": 134352076,
+  "duration": 124552224,
   "status": "passed"
 });
 formatter.match({
@@ -904,21 +904,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 83335294,
+  "duration": 98886682,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logButtonIsPressedWithoutVerifyingHomePage()"
 });
 formatter.result({
-  "duration": 548259251,
+  "duration": 804714978,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.messageWithInvalidCredentialsIsReturned()"
 });
 formatter.result({
-  "duration": 46030263,
+  "duration": 45051432,
   "status": "passed"
 });
 formatter.scenario({
@@ -972,7 +972,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 300534315,
+  "duration": 574663300,
   "status": "passed"
 });
 formatter.match({
@@ -989,7 +989,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userAndPasswordAreSendWithInvalidValues(String,String)"
 });
 formatter.result({
-  "duration": 153376623,
+  "duration": 161880774,
   "status": "passed"
 });
 formatter.match({
@@ -1002,21 +1002,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 95446022,
+  "duration": 117058975,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logButtonIsPressedWithoutVerifyingHomePage()"
 });
 formatter.result({
-  "duration": 547723438,
+  "duration": 929882553,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.messageWithInvalidCredentialsIsReturned()"
 });
 formatter.result({
-  "duration": 42499375,
+  "duration": 41039040,
   "status": "passed"
 });
 formatter.scenario({
@@ -1070,7 +1070,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 305592248,
+  "duration": 540395253,
   "status": "passed"
 });
 formatter.match({
@@ -1087,7 +1087,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userAndPasswordAreSendWithInvalidValues(String,String)"
 });
 formatter.result({
-  "duration": 159415096,
+  "duration": 151223538,
   "status": "passed"
 });
 formatter.match({
@@ -1100,21 +1100,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 78786661,
+  "duration": 101637157,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logButtonIsPressedWithoutVerifyingHomePage()"
 });
 formatter.result({
-  "duration": 538709133,
+  "duration": 764958809,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.messageWithInvalidCredentialsIsReturned()"
 });
 formatter.result({
-  "duration": 37075824,
+  "duration": 43957144,
   "status": "passed"
 });
 formatter.scenario({
@@ -1168,7 +1168,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 310424823,
+  "duration": 585980787,
   "status": "passed"
 });
 formatter.match({
@@ -1185,7 +1185,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userAndPasswordAreSendWithInvalidValues(String,String)"
 });
 formatter.result({
-  "duration": 153062748,
+  "duration": 146292183,
   "status": "passed"
 });
 formatter.match({
@@ -1198,21 +1198,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 84178995,
+  "duration": 107425898,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logButtonIsPressedWithoutVerifyingHomePage()"
 });
 formatter.result({
-  "duration": 574184362,
+  "duration": 722925545,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.messageWithInvalidCredentialsIsReturned()"
 });
 formatter.result({
-  "duration": 38773917,
+  "duration": 38570796,
   "status": "passed"
 });
 formatter.scenario({
@@ -1266,7 +1266,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 348558160,
+  "duration": 520299508,
   "status": "passed"
 });
 formatter.match({
@@ -1283,7 +1283,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userAndPasswordAreSendWithInvalidValues(String,String)"
 });
 formatter.result({
-  "duration": 159750781,
+  "duration": 140768996,
   "status": "passed"
 });
 formatter.match({
@@ -1296,21 +1296,21 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 85858700,
+  "duration": 94644656,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.logButtonIsPressedWithoutVerifyingHomePage()"
 });
 formatter.result({
-  "duration": 597029726,
+  "duration": 1017363657,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.messageWithInvalidCredentialsIsReturned()"
 });
 formatter.result({
-  "duration": 39567587,
+  "duration": 50842312,
   "status": "passed"
 });
 formatter.uri("RegisterPatient.feature");
@@ -1476,14 +1476,14 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 306344866,
+  "duration": 545741831,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials()"
 });
 formatter.result({
-  "duration": 193734887,
+  "duration": 175572428,
   "status": "passed"
 });
 formatter.match({
@@ -1496,42 +1496,42 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 80236732,
+  "duration": 114462873,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess()"
 });
 formatter.result({
-  "duration": 1021625782,
+  "duration": 1279622665,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.registerAPatientButtonIsSent()"
 });
 formatter.result({
-  "duration": 3882967537,
+  "duration": 4012975811,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.theNameOfThePatientIsProvidedAndNextSectionIsSet(DataTable)"
 });
 formatter.result({
-  "duration": 635624042,
+  "duration": 965153378,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.theGenderIsProvided(PatientDetails\u003e)"
 });
 formatter.result({
-  "duration": 212032046,
+  "duration": 413189196,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.theBirthdayIsSet(DataTable)"
 });
 formatter.result({
-  "duration": 510064336,
+  "duration": 1990277122,
   "status": "passed"
 });
 formatter.match({
@@ -1544,7 +1544,7 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillSendTheAddress(String)"
 });
 formatter.result({
-  "duration": 256343689,
+  "duration": 262941923,
   "status": "passed"
 });
 formatter.match({
@@ -1557,28 +1557,28 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillProvideTheTelephone(Integer)"
 });
 formatter.result({
-  "duration": 255652223,
+  "duration": 265633385,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillSendThePatientRelatedTo(DataTable)"
 });
 formatter.result({
-  "duration": 587162311,
+  "duration": 712159691,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillPressConfirm()"
 });
 formatter.result({
-  "duration": 128186598,
+  "duration": 139203038,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.pageWithUserInformationWillAppear()"
 });
 formatter.result({
-  "duration": 5534695457,
+  "duration": 4846726007,
   "status": "passed"
 });
 });
