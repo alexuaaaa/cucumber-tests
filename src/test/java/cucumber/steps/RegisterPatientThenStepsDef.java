@@ -1,5 +1,6 @@
 package cucumber.steps;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.classObjects.PatientDetails;
 import cucumber.tests.OpenMRSTests;
@@ -19,11 +20,13 @@ public class RegisterPatientThenStepsDef {
     }
 
     @And("^The PatientDetails are set$")
-    public static void theNameOfThePatientIsProvidedAndNextSectionIsSet(List<PatientDetails> patientDetails) {
+    public static void theNameOfThePatientIsProvidedAndNextSectionIsSet(DataTable table) {
+        List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+
         for (PatientDetails detailsPatient : patientDetails) {
-            OpenMRSTests.driver.findElement(By.name(GIVEN_BUTTON)).sendKeys(detailsPatient.getGiven());
-            OpenMRSTests.driver.findElement(By.name(MIDDLE_BUTTON)).sendKeys(detailsPatient.getMiddle());
-            OpenMRSTests.driver.findElement(By.name(FAMILY_NAME_BUTTON)).sendKeys(detailsPatient.getFamilyName());
+            OpenMRSTests.driver.findElement(By.name(GIVEN_BUTTON)).sendKeys(detailsPatient.given);
+            OpenMRSTests.driver.findElement(By.name(MIDDLE_BUTTON)).sendKeys(detailsPatient.middle);
+            OpenMRSTests.driver.findElement(By.name(FAMILY_NAME_BUTTON)).sendKeys(detailsPatient.familyName);
         }
 
         Assert.assertTrue(OpenMRSTests.driver.findElement(By.name(GIVEN_BUTTON)).isDisplayed());
@@ -36,8 +39,8 @@ public class RegisterPatientThenStepsDef {
 
     @And("^The gender is provided$")
     public static void theGenderIsProvided(List<PatientDetails> patientDetailsList) {
-        for(PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.xpath(patientDetails.getPath())).click();
+        for (PatientDetails patientDetails : patientDetailsList) {
+            OpenMRSTests.driver.findElement(By.xpath(patientDetails.path)).click();
         }
 
         Assert.assertTrue(OpenMRSTests.driver.findElement(By.id(BIRTHDAY_ID)).isDisplayed());
@@ -46,10 +49,12 @@ public class RegisterPatientThenStepsDef {
     }
 
     @And("^The birthday is set$")
-    public static void theBirthdayIsSet(List<PatientDetails> patientDetailsList) {
-        for(PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.id(DAY_ID)).sendKeys(patientDetails.getDay());
-            OpenMRSTests.driver.findElement(By.id(YEAR_ID)).sendKeys(patientDetails.getYear());
+    public static void theBirthdayIsSet(DataTable table) {
+        List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+
+        for (PatientDetails patientDetails : patientDetailsList) {
+            OpenMRSTests.driver.findElement(By.id(DAY_ID)).sendKeys(patientDetails.day);
+            OpenMRSTests.driver.findElement(By.id(YEAR_ID)).sendKeys(patientDetails.year);
         }
 
         Assert.assertTrue(OpenMRSTests.driver.findElement(By.id(MONTH_ID)).isDisplayed());
@@ -72,12 +77,14 @@ public class RegisterPatientThenStepsDef {
     }
 
     @And("^User will send the patient related to$")
-    public static void userWillSendThePatientRelatedTo(List<PatientDetails> patientDetailsList) {
+    public static void userWillSendThePatientRelatedTo(DataTable table) {
+        List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+
         OpenMRSTests.driver.findElement(By.id(PATIENT_TYPE_ID)).click();
         OpenMRSTests.driver.findElement(By.xpath(PATIENT_DOCTOR)).click();
 
-        for(PatientDetails patientDetails : patientDetailsList) {
-            OpenMRSTests.driver.findElement(By.xpath(PERSONAL_NAME_PATH)).sendKeys(patientDetails.getPersonName());
+        for (PatientDetails patientDetails : patientDetailsList) {
+            OpenMRSTests.driver.findElement(By.xpath(PERSONAL_NAME_PATH)).sendKeys(patientDetails.personName);
         }
         OpenMRSTests.driver.findElement(By.xpath(CONFIRM_BUTTON_XPATH)).click();
     }
