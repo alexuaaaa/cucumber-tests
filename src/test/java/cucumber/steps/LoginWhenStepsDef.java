@@ -3,15 +3,15 @@ package cucumber.steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 
-import static cucumber.Base.getElementType;
+import static cucumber.Base.*;
 import static cucumber.Constants.*;
 
 public class LoginWhenStepsDef {
 
-    @When("^User is send the valid credentials$")
-    public static void userIsSendTheValidCredentials() {
-        getElementType(USER_NAME).sendKeys(USER_NAME_VALUE);
-        getElementType(PASSWORD).sendKeys(PASSWORD_VALUE);
+    @When("^User is send the valid \"(.*)\" and \"(.*)\"$")
+    public static void userIsSendTheValidCredentials(String elementUser, String elementPassword) {
+        getElementType(getLocator(getCurrentPage(), elementUser)).sendKeys(USER_NAME_VALUE);
+        getElementType(getLocator(getCurrentPage(), elementPassword)).sendKeys(PASSWORD_VALUE);
     }
 
     @And("^User is send one \"(.*)\"")

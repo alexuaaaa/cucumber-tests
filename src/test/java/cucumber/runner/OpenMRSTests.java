@@ -4,8 +4,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -14,7 +13,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
-//        tags = {"@Login"},/*tags means that specific feature is tested, or scenario*/
+        tags = {"@Test1"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         /*monochrome = true displays the output in a readable format*/
         format = // generate format report
@@ -31,13 +30,13 @@ public class OpenMRSTests {
 
     @BeforeClass
     public void setUP() {
-//        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        //      System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 
-        //driver = new ChromeDriver();
-        FirefoxOptions options = new FirefoxOptions();
-        options.setCapability("marionette", false);
-        driver = new FirefoxDriver(options);
+        driver = new ChromeDriver();
+//        FirefoxOptions options = new FirefoxOptions();
+//        options.setCapability("marionette", false);
+//        driver = new FirefoxDriver(options);
 
         driver.manage().window().maximize();
 

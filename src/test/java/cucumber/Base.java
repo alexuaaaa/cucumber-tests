@@ -7,20 +7,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Base extends OpenMRSTests {
 
+    public static String getLocator(String className, String elementName) {
+        Class<?> cls = null;
+        String locator = "";
 
-//    public String getLocator(String className, String elementName) throws ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException, NoSuchMethodException, SecurityException {
-//        Class<?> cls = Class.forName("com.pb.cucumberdemo.pageobjs." + className + "_Objs");
-//        Method findLocator = cls.getMethod("findLocator", String.class);
-//
-//        String locator = (String) findLocator.invoke(cls.getDeclaredConstructor().newInstance(), elementName);
-//
-//        return locator;
-//    }
+        try {
+            cls = Class.forName("cucumber.pageobjs." + className + "_Objs");
+            Method findLocator = cls.getMethod("findLocator", String.class);
+            locator = (String) findLocator.invoke(cls.getDeclaredConstructor().newInstance(), elementName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return locator;
+    }
 
     public static WebElement getElementType(String locator) {
         WebElement element;
@@ -41,10 +44,7 @@ public class Base extends OpenMRSTests {
         return element;
     }
 
-    public static void verifyFieldText(String field, String value) {
-    }
-
-    static String getCurrentPage() {
+    public static String getCurrentPage() {
         String url = driver.getCurrentUrl();
         String page = "";
 
@@ -67,5 +67,8 @@ public class Base extends OpenMRSTests {
     public static void waitForElementOrPageDisplay(WebDriver driver, String locator, Integer timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+    }
+
+    public static void verifyFieldText(String field, String value) {
     }
 }
