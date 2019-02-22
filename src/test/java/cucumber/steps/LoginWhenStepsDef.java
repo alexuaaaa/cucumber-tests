@@ -20,10 +20,10 @@ public class LoginWhenStepsDef {
         getElementType(location).click();
     }
 
-    @When("^User is send the invalid \"(.*)\" and invalid \"(.*)\" credentials$")
-    public static void userAndPasswordAreSendWithInvalidValues(String username, String password) {
+    @When("^User is send the \"(.*)\" invalid value \"(.*)\" and \"(.*)\" with invalid \"(.*)\" credentials$")
+    public static void userAndPasswordAreSendWithInvalidValues(String elementUser, String username, String elementPassword, String password) {
 
-        getElementType(USER_NAME).sendKeys(username);
-        getElementType(PASSWORD).sendKeys(password);
+        getElementType(getLocator(getCurrentPage(), elementUser)).sendKeys(username);
+        getElementType(getLocator(getCurrentPage(), elementPassword)).sendKeys(password);
     }
 }

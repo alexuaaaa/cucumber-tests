@@ -12,6 +12,7 @@ public class LoginObjs {
         loginMap.put("Username", "username");
         loginMap.put("Password", "password");
         loginMap.put("Login", "loginButton");
+        loginMap.put("LoginInvalidMessage", "error-message");
     }
 
     public static String findLocator(String elementName) {

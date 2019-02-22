@@ -31,10 +31,10 @@ Feature: Login form of the application
   Scenario Outline: 3. When user is login with invalid credentials then invalid message is returned
   Negative test
     Given The URL application is accessed with success
-    When User is send the invalid "<username>" and invalid "<password>" credentials
+    When User is send the "Username" invalid value "<username>" and "Password" with invalid "<password>" credentials
     And  User is send one "Inpatient Ward"
     And "Login" button is pressed without verifying home page
-    Then Invalid message with invalid user/pass is returned
+    Then "LoginInvalidMessage" with invalid user/pass is returned
     Examples:
       | username | password |
       | test     | test     |

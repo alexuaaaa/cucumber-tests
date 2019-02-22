@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="293d0e2c-f7cd-4b61-85dc-70457df21bd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/HomePageObjs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/Login_Objs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/Cucumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/Cucumber.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/CucumberTestReport.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/CucumberTestReport.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber-reports/cucumber-pretty/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber-reports/cucumber-pretty/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cucumber/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cucumber/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cucumber/steps/LoginThenStepsDef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cucumber/steps/LoginThenStepsDef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/RegisterPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/RegisterPatient.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="280">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
                 <element signature="e#651#652#0" expanded="true" />
                 <element signature="e#700#701#0" expanded="true" />
@@ -52,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="439">
+              <caret line="46" column="94" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#914#915#0" expanded="true" />
@@ -66,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="280">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,16 +67,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/Login.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state relative-caret-position="287">
+              <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
@@ -96,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/Base.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="293">
+              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="240">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,8 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="219">
+              <caret line="11" column="90" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -172,15 +164,16 @@
         <option value="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/Login_Objs.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/RegisterPatient.feature" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/RegisterPatientThenStepsDef.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
-        <option value="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/Base.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/HomeObjs.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/HomePageObjs.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
       </list>
     </option>
   </component>
@@ -349,7 +342,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550829693971" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550832424603" />
     <property name="last_opened_file_path" value="E:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -508,13 +501,17 @@
       <option name="project" value="LOCAL" />
       <updated>1550827551424</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor v2 object model">
+      <created>1550829738429</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550829738429</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunnerTests - 2019.02.22 at 10h 58m 25s.xml">
-      <configuration name="RunnerTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="RunnerTests - 2019.02.22 at 11h 25m 17s.xml">
       <configuration name="RunnerTests" configurationId="TestNG" />
     </history-entry>
@@ -542,9 +539,12 @@
     <history-entry file="RunnerTests - 2019.02.22 at 12h 00m 21s.xml">
       <configuration name="RunnerTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="RunnerTests - 2019.02.22 at 12h 40m 39s.xml">
+      <configuration name="RunnerTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31567000" />
+    <option name="totallyTimeSpent" value="34237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -561,7 +561,7 @@
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.4136069" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.237581" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.32289416" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -591,7 +591,8 @@
     <MESSAGE value="added also asserter class" />
     <MESSAGE value="added also page object model" />
     <MESSAGE value="refactor v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor v1" />
+    <MESSAGE value="refactor v2 object model" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor v2 object model" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -796,50 +797,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/pageobjs/HomePageObjs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,22 +814,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/Base.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="293">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#967#968#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/Base.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="240">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -875,15 +836,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="219">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginWhenStepsDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/steps/LoginThenStepsDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="46" column="94" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#967#968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/Login.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state relative-caret-position="287">
+          <caret line="36" column="40" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>

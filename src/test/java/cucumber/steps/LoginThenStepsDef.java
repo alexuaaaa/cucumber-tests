@@ -41,10 +41,10 @@ public class LoginThenStepsDef {
         getElementType(LOGOUT_BUTTON).click();
     }
 
-    @Then("^Invalid message with invalid user/pass is returned$")
-    public static void messageWithInvalidCredentialsIsReturned() {
+    @Then("^\"(.*)\" with invalid user/pass is returned$")
+    public static void messageWithInvalidCredentialsIsReturned(String errorMessageLogin) {
 
-        String expectedMessage = getElementType(INVALID_MESSAGE_CREDENTIALS_PATH).getText();
+        String expectedMessage = getElementType(getLocator(getCurrentPage(), errorMessageLogin)).getText();
 
         Assert.assertEquals(INVALID_MESSAGE_CREDENTIALS, expectedMessage, "Message is not equal in invalid is logged");
     }
