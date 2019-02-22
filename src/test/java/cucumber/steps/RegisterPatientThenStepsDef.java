@@ -9,33 +9,32 @@ import org.testng.Assert;
 import java.util.List;
 
 import static cucumber.Asserter.asserterPages;
-import static cucumber.Base.getElementType;
-import static cucumber.Base.waitForElementOrPageDisplay;
+import static cucumber.Base.*;
 import static cucumber.Constants.*;
 
 public class RegisterPatientThenStepsDef {
 
-    @And("^Register a patient button is sent$")
-    public static void registerAPatientButtonIsSent() {
+    @And("^\"(.*)\" button is sent$")
+    public static void registerAPatientButtonIsSent(String registerPatient) {
 
-        getElementType(REGISTER_A_PATIENT_BUTTON).click();
+        getElementType(getLocator(getCurrentPage(), registerPatient)).click();
 
         asserterPages(REGISTER_PAGE);
     }
 
-    @And("^The PatientDetails are set$")
-    public static void theNameOfThePatientIsProvidedAndNextSectionIsSet(DataTable table) {
+    @And("^The PatientDetails with \"(.*)\" and \"(.*)\" and \"(.*)\" are set$")
+    public static void theNameOfThePatientIsProvidedAndNextSectionIsSet(String givenName, String middleName, String familyName, DataTable table) {
         List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
 
         for (PatientDetails detailsPatient : patientDetails) {
-            getElementType(GIVEN_BUTTON).sendKeys(detailsPatient.given);
-            getElementType(MIDDLE_BUTTON).sendKeys(detailsPatient.middle);
-            getElementType(FAMILY_NAME_BUTTON).sendKeys(detailsPatient.familyName);
+            getElementType(getLocator(getCurrentPage(), givenName)).sendKeys(detailsPatient.given);
+            getElementType(getLocator(getCurrentPage(), middleName)).sendKeys(detailsPatient.middle);
+            getElementType(getLocator(getCurrentPage(), familyName)).sendKeys(detailsPatient.familyName);
         }
 
-        Assert.assertTrue(getElementType(GIVEN_BUTTON).isDisplayed());
-        Assert.assertTrue(getElementType(MIDDLE_BUTTON).isDisplayed());
-        Assert.assertTrue(getElementType((FAMILY_NAME_BUTTON)).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), givenName)).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), middleName)).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), familyName)).isDisplayed());
         Assert.assertTrue(getElementType((GENDER_BUTTON)).isDisplayed());
 
         getElementType(GENDER_BUTTON).click();

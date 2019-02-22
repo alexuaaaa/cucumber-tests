@@ -7,8 +7,8 @@ Feature: Register a patient
     When User is send the valid "Username" and "Password"
     And  User is send one "Inpatient Ward"
     Then "Login" button is pressed
-    And Register a patient button is sent
-    And The PatientDetails are set
+    And "RegisterPatient" button is sent
+    And The PatientDetails with "GivenName" and "MiddleName" and "FamilyName" are set
       | Given | Middle | FamilyName |
       | Alex  | Andrei | Albu       |
     And The gender is provided

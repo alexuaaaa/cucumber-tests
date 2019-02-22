@@ -7,10 +7,6 @@ public class Constants {
     public static final String PASSWORD_VALUE = "Admin123";
     public static final String LOGOUT_BUTTON = "/html/body/header/ul/li[3]/a";
     public static final String INVALID_MESSAGE_CREDENTIALS = "Invalid username/password. Please try again.";
-    public static final String REGISTER_A_PATIENT_BUTTON = "//*[@id=\"referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension\"]";
-    public static final String GIVEN_BUTTON = "givenName";
-    public static final String MIDDLE_BUTTON = "middleName";
-    public static final String FAMILY_NAME_BUTTON = "familyName";
     public static final String GENDER_BUTTON = "//*[@id=\"genderLabel\"]";
     public static final String BIRTHDAY_ID = "birthdateLabel";
     public static final String DAY_ID = "birthdateDay-field";
@@ -31,15 +27,4 @@ public class Constants {
     public static final String LOGIN_PAGE = "Login";
     public static final String REGISTER_PAGE = "RegisterPatient";
     public static final String HOME_PAGE = "HomePage";
-    public static final String FIND_PATIENT_RECORD = "//*[@id=\"coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension\"]";
-    public static final String ACTIVE_VISITS = "//*[@id=\"org-openmrs-module-coreapps-activeVisitsHomepageLink-org-openmrs-module-coreapps-activeVisitsHomepageLink-extension\"]";
-    public static final String REGISTER_A_PATIENT = "//*[@id=\"referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension\"]";
-    public static final String CAPTURE_VITALS = "//*[@id=\"referenceapplication-vitals-referenceapplication-vitals-extension\"]";
-    public static final String APPOINTMENT_SCHEDULE = "//*[@id=\"appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension\"]";
-    public static final String REPORTS = "//*[@id=\"reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension\"]";
-    public static final String DATA_MANAGEMENT = "//*[@id=\"coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension\"]";
-    public static final String CONFIGURE_METADATA = "//*[@id=\"org-openmrs-module-adminui-configuremetadata-homepageLink-org-openmrs-module-adminui-configuremetadata-homepageLink-extension\"]";
-    public static final String SYSTEM_ADMIN = "//*[@id=\"coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension\"]";
-
-
 }
