@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="24.913428">
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="5.783635">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="101.098284">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully" time="64.259808">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Isolation Ward".......................................passed
 Then "Login" button is pressed..............................................passed
-And Message with logged In appears having "Isolation Ward"..................passed
+And "LoggedInMessage" with logged In appears having "Isolation Ward"........passed
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="2.367789">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 2" time="7.176201">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Laboratory"...........................................passed
 Then "Login" button is pressed..............................................passed
-And Message with logged In appears having "Laboratory"......................passed
+And "LoggedInMessage" with logged In appears having "Laboratory"............passed
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="2.285277">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 3" time="6.105115">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Outpatient Clinic"....................................passed
 Then "Login" button is pressed..............................................passed
-And Message with logged In appears having "Outpatient Clinic"...............passed
+And "LoggedInMessage" with logged In appears having "Outpatient Clinic".....passed
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="2.59763">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 4" time="4.132881">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Pharmacy".............................................passed
 Then "Login" button is pressed..............................................passed
-And Message with logged In appears having "Pharmacy"........................passed
+And "LoggedInMessage" with logged In appears having "Pharmacy"..............passed
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="2.280002">
+<testcase classname="Login form of the application" name="1. When user and password are send with valid values then user is logged successfully 5" time="2.34979">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Registration Desk"....................................passed
 Then "Login" button is pressed..............................................passed
-And Message with logged In appears having "Registration Desk"...............passed
+And "LoggedInMessage" with logged In appears having "Registration Desk".....passed
 And Logout button will be clicked...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="9.599095">
+<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="17.074489">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Inpatient Ward".......................................passed

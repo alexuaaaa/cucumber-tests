@@ -8,7 +8,7 @@ Feature: Login form of the application
     When User is send the valid "Username" and "Password"
     And  User is send one "<location>"
     Then "Login" button is pressed
-    And Message with logged In appears having "<location>"
+    And "LoggedInMessage" with logged In appears having "<location>"
     And Logout button will be clicked
     Examples:
       | location          |

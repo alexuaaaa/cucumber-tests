@@ -3,7 +3,7 @@ package cucumber.pageobjs;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Login_Objs {
+public class LoginObjs {
 
     private static final Map<String, String> loginMap;
 

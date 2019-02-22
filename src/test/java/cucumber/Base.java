@@ -16,7 +16,7 @@ public class Base extends RunnerTests {
         String locator = "";
 
         try {
-            cls = Class.forName("cucumber.pageobjs." + className + "_Objs");
+            cls = Class.forName("cucumber.pageobjs." + className + "Objs");
             Method findLocator = cls.getMethod("findLocator", String.class);
             locator = (String) findLocator.invoke(cls.getDeclaredConstructor().newInstance(), elementName);
         } catch (Exception e) {

@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3338408960,
+              "duration": 2817023573,
               "status": "passed"
             },
             "line": 7,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 265780053,
+              "duration": 17897267626,
               "status": "passed"
             },
             "line": 8,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 92218026,
+              "duration": 85550934,
               "status": "passed"
             },
             "line": 9,
@@ -67,7 +67,7 @@
           },
           {
             "result": {
-              "duration": 1342096213,
+              "duration": 2874977280,
               "status": "passed"
             },
             "line": 10,
@@ -85,19 +85,23 @@
           },
           {
             "result": {
-              "duration": 47930027,
+              "duration": 39860697173,
               "status": "passed"
             },
             "line": 11,
-            "name": "Message with logged In appears having \"Isolation Ward\"",
+            "name": "\"LoggedInMessage\" with logged In appears having \"Isolation Ward\"",
             "match": {
               "arguments": [
                 {
+                  "val": "LoggedInMessage",
+                  "offset": 1
+                },
+                {
                   "val": "Isolation Ward",
-                  "offset": 39
+                  "offset": 49
                 }
               ],
-              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
+              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String,String)"
             },
             "matchedColumns": [
               0
@@ -106,7 +110,7 @@
           },
           {
             "result": {
-              "duration": 697201920,
+              "duration": 724291414,
               "status": "passed"
             },
             "line": 12,
@@ -138,7 +142,7 @@
         "steps": [
           {
             "result": {
-              "duration": 324797440,
+              "duration": 315426560,
               "status": "passed"
             },
             "line": 7,
@@ -150,7 +154,7 @@
           },
           {
             "result": {
-              "duration": 192505600,
+              "duration": 2774129066,
               "status": "passed"
             },
             "line": 8,
@@ -172,7 +176,7 @@
           },
           {
             "result": {
-              "duration": 81624747,
+              "duration": 79428267,
               "status": "passed"
             },
             "line": 9,
@@ -193,7 +197,7 @@
           },
           {
             "result": {
-              "duration": 1046175574,
+              "duration": 1840359253,
               "status": "passed"
             },
             "line": 10,
@@ -211,19 +215,23 @@
           },
           {
             "result": {
-              "duration": 44959146,
+              "duration": 1416563626,
               "status": "passed"
             },
             "line": 11,
-            "name": "Message with logged In appears having \"Laboratory\"",
+            "name": "\"LoggedInMessage\" with logged In appears having \"Laboratory\"",
             "match": {
               "arguments": [
                 {
+                  "val": "LoggedInMessage",
+                  "offset": 1
+                },
+                {
                   "val": "Laboratory",
-                  "offset": 39
+                  "offset": 49
                 }
               ],
-              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
+              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String,String)"
             },
             "matchedColumns": [
               0
@@ -232,7 +240,7 @@
           },
           {
             "result": {
-              "duration": 677726293,
+              "duration": 750294187,
               "status": "passed"
             },
             "line": 12,
@@ -264,7 +272,7 @@
         "steps": [
           {
             "result": {
-              "duration": 302058667,
+              "duration": 309908480,
               "status": "passed"
             },
             "line": 7,
@@ -276,7 +284,7 @@
           },
           {
             "result": {
-              "duration": 201661013,
+              "duration": 1317591466,
               "status": "passed"
             },
             "line": 8,
@@ -298,7 +306,7 @@
           },
           {
             "result": {
-              "duration": 88163840,
+              "duration": 80318720,
               "status": "passed"
             },
             "line": 9,
@@ -319,7 +327,7 @@
           },
           {
             "result": {
-              "duration": 969039360,
+              "duration": 1579397973,
               "status": "passed"
             },
             "line": 10,
@@ -337,19 +345,23 @@
           },
           {
             "result": {
-              "duration": 45713067,
+              "duration": 2081404160,
               "status": "passed"
             },
             "line": 11,
-            "name": "Message with logged In appears having \"Outpatient Clinic\"",
+            "name": "\"LoggedInMessage\" with logged In appears having \"Outpatient Clinic\"",
             "match": {
               "arguments": [
                 {
+                  "val": "LoggedInMessage",
+                  "offset": 1
+                },
+                {
                   "val": "Outpatient Clinic",
-                  "offset": 39
+                  "offset": 49
                 }
               ],
-              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
+              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String,String)"
             },
             "matchedColumns": [
               0
@@ -358,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 678641493,
+              "duration": 736494507,
               "status": "passed"
             },
             "line": 12,
@@ -390,7 +402,7 @@
         "steps": [
           {
             "result": {
-              "duration": 362087253,
+              "duration": 319097173,
               "status": "passed"
             },
             "line": 7,
@@ -402,7 +414,7 @@
           },
           {
             "result": {
-              "duration": 287546027,
+              "duration": 1997665706,
               "status": "passed"
             },
             "line": 8,
@@ -424,7 +436,7 @@
           },
           {
             "result": {
-              "duration": 96532907,
+              "duration": 83072427,
               "status": "passed"
             },
             "line": 9,
@@ -445,7 +457,7 @@
           },
           {
             "result": {
-              "duration": 1040861014,
+              "duration": 1014237014,
               "status": "passed"
             },
             "line": 10,
@@ -463,19 +475,23 @@
           },
           {
             "result": {
-              "duration": 47822507,
+              "duration": 51517440,
               "status": "passed"
             },
             "line": 11,
-            "name": "Message with logged In appears having \"Pharmacy\"",
+            "name": "\"LoggedInMessage\" with logged In appears having \"Pharmacy\"",
             "match": {
               "arguments": [
                 {
+                  "val": "LoggedInMessage",
+                  "offset": 1
+                },
+                {
                   "val": "Pharmacy",
-                  "offset": 39
+                  "offset": 49
                 }
               ],
-              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
+              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String,String)"
             },
             "matchedColumns": [
               0
@@ -484,7 +500,7 @@
           },
           {
             "result": {
-              "duration": 762780160,
+              "duration": 667291733,
               "status": "passed"
             },
             "line": 12,
@@ -516,7 +532,7 @@
         "steps": [
           {
             "result": {
-              "duration": 277946453,
+              "duration": 295513173,
               "status": "passed"
             },
             "line": 7,
@@ -528,7 +544,7 @@
           },
           {
             "result": {
-              "duration": 205352960,
+              "duration": 189206614,
               "status": "passed"
             },
             "line": 8,
@@ -550,7 +566,7 @@
           },
           {
             "result": {
-              "duration": 80486827,
+              "duration": 100075520,
               "status": "passed"
             },
             "line": 9,
@@ -571,7 +587,7 @@
           },
           {
             "result": {
-              "duration": 990899627,
+              "duration": 982034346,
               "status": "passed"
             },
             "line": 10,
@@ -589,19 +605,23 @@
           },
           {
             "result": {
-              "duration": 37958400,
+              "duration": 48878507,
               "status": "passed"
             },
             "line": 11,
-            "name": "Message with logged In appears having \"Registration Desk\"",
+            "name": "\"LoggedInMessage\" with logged In appears having \"Registration Desk\"",
             "match": {
               "arguments": [
                 {
+                  "val": "LoggedInMessage",
+                  "offset": 1
+                },
+                {
                   "val": "Registration Desk",
-                  "offset": 39
+                  "offset": 49
                 }
               ],
-              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String)"
+              "location": "LoginThenStepsDef.messageWithLoggedInAppears(String,String)"
             },
             "matchedColumns": [
               0
@@ -610,7 +630,7 @@
           },
           {
             "result": {
-              "duration": 687357867,
+              "duration": 734081707,
               "status": "passed"
             },
             "line": 12,
@@ -658,7 +678,7 @@
         "steps": [
           {
             "result": {
-              "duration": 306257067,
+              "duration": 288433920,
               "status": "passed"
             },
             "line": 6,
@@ -670,7 +690,7 @@
           },
           {
             "result": {
-              "duration": 172310187,
+              "duration": 180822613,
               "status": "passed"
             },
             "line": 7,
@@ -692,7 +712,7 @@
           },
           {
             "result": {
-              "duration": 80995840,
+              "duration": 95581440,
               "status": "passed"
             },
             "line": 8,
@@ -710,7 +730,7 @@
           },
           {
             "result": {
-              "duration": 948914346,
+              "duration": 968023466,
               "status": "passed"
             },
             "line": 9,
@@ -728,7 +748,7 @@
           },
           {
             "result": {
-              "duration": 2029458346,
+              "duration": 5373669973,
               "status": "passed"
             },
             "line": 10,
@@ -740,7 +760,7 @@
           },
           {
             "result": {
-              "duration": 649084160,
+              "duration": 730654720,
               "status": "passed"
             },
             "line": 11,
@@ -770,7 +790,7 @@
           },
           {
             "result": {
-              "duration": 207269973,
+              "duration": 212812800,
               "status": "passed"
             },
             "line": 14,
@@ -798,7 +818,7 @@
           },
           {
             "result": {
-              "duration": 511286614,
+              "duration": 492696320,
               "status": "passed"
             },
             "line": 17,
@@ -826,7 +846,7 @@
           },
           {
             "result": {
-              "duration": 224207360,
+              "duration": 230238720,
               "status": "passed"
             },
             "line": 20,
@@ -844,7 +864,7 @@
           },
           {
             "result": {
-              "duration": 236122454,
+              "duration": 226041600,
               "status": "passed"
             },
             "line": 21,
@@ -862,7 +882,7 @@
           },
           {
             "result": {
-              "duration": 590909014,
+              "duration": 576180480,
               "status": "passed"
             },
             "line": 22,
@@ -890,7 +910,7 @@
           },
           {
             "result": {
-              "duration": 96583680,
+              "duration": 93118720,
               "status": "passed"
             },
             "line": 25,
@@ -902,7 +922,7 @@
           },
           {
             "result": {
-              "duration": 3545696000,
+              "duration": 7606214400,
               "status": "passed"
             },
             "line": 26,

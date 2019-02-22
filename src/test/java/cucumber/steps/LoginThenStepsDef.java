@@ -14,7 +14,7 @@ public class LoginThenStepsDef {
     @Then("^\"(.*)\" button is pressed$")
     public static void userIsLoggedInWithSuccess(String logIn) {
 
-        getElementType((getLocator(getCurrentPage(), logIn))).click();
+        getElementType(getLocator(getCurrentPage(), logIn)).click();
 
         asserterPages(HOME_PAGE);
         asserterDisplayedHomeButtons();
@@ -23,17 +23,17 @@ public class LoginThenStepsDef {
     @And("^\"(.*)\" button is pressed without verifying home page$")
     public static void logButtonIsPressedWithoutVerifyingHomePage(String logIn) {
 
-        getElementType((getLocator(getCurrentPage(), logIn))).click();
+        getElementType(getLocator(getCurrentPage(), logIn)).click();
 
         asserterPages(LOGIN_PAGE);
     }
 
-    @And("^Message with logged In appears having \"(.*)\"$")
-    public static void messageWithLoggedInAppears(String locationOutput) {
+    @And("^\"(.*)\" with logged In appears having \"(.*)\"$")
+    public static void messageWithLoggedInAppears(String message, String locationOutput) {
 
-        String expectedMessage = getElementType(LOGGED_IN_WARD_LOCATION).getText();
+        String expectedMessage = getElementType(getLocator(getCurrentPage(), message)).getText();
 
-        Assert.assertEquals("Logged in as Super User () at " + locationOutput + ".", expectedMessage, "The message from loggedIn is not equal");
+        Assert.assertTrue(expectedMessage.contains("Logged in as Super User () at " + locationOutput + "."), "The message from loggedIn is not equal");
     }
 
     @And("^Logout button will be clicked$")
