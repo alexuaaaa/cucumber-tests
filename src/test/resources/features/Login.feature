@@ -7,7 +7,7 @@ Feature: Login form of the application
     Given The URL application is accessed with success
     When User is send the valid "Username" and "Password"
     And  User is send one "<location>"
-    Then Login button is pressed
+    Then "Login" button is pressed
     And Message with logged In appears having "<location>"
     And Logout button will be clicked
     Examples:
@@ -24,7 +24,7 @@ Feature: Login form of the application
     Given The URL application is accessed with success
     When User is send the valid "Username" and "Password"
     And  User is send one "Inpatient Ward"
-    Then Login button is pressed
+    Then "Login" button is pressed
     And Logout button will be clicked
 
   @Test3
@@ -33,7 +33,7 @@ Feature: Login form of the application
     Given The URL application is accessed with success
     When User is send the invalid "<username>" and invalid "<password>" credentials
     And  User is send one "Inpatient Ward"
-    And Login button is pressed without verifying home page
+    And "Login" button is pressed without verifying home page
     Then Invalid message with invalid user/pass is returned
     Examples:
       | username | password |

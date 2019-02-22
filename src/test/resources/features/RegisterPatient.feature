@@ -4,9 +4,9 @@ Feature: Register a patient
   @Test1
   Scenario: Register a patient and after that set confirm
     Given The URL application is accessed with success
-    When User is send the valid credentials
+    When User is send the valid "Username" and "Password"
     And  User is send one "Inpatient Ward"
-    Then Login button is pressed
+    Then "Login" button is pressed
     And Register a patient button is sent
     And The PatientDetails are set
       | Given | Middle | FamilyName |

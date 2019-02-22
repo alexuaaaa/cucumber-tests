@@ -23,7 +23,7 @@ import org.testng.annotations.Test;
                         "rerun:target/cucumber-reports/re-run.txt",
                         "junit:target/cucumber-reports/Cucumber.xml"}
 )
-public class OpenMRSTests {
+public class RunnerTests {
 
     public static WebDriver driver;
     private TestNGCucumberRunner testRunner;
@@ -40,7 +40,7 @@ public class OpenMRSTests {
 
         driver.manage().window().maximize();
 
-        testRunner = new TestNGCucumberRunner(OpenMRSTests.class);
+        testRunner = new TestNGCucumberRunner(RunnerTests.class);
     }
 
     @Test(dataProvider = "features")

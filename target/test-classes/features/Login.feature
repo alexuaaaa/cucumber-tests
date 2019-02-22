@@ -5,9 +5,9 @@ Feature: Login form of the application
   Scenario Outline: 1. When user and password are send with valid values then user is logged successfully
   Positive test
     Given The URL application is accessed with success
-    When User is send the valid credentials
+    When User is send the valid "Username" and "Password"
     And  User is send one "<location>"
-    Then Login button is pressed
+    Then "Login" button is pressed
     And Message with logged In appears having "<location>"
     And Logout button will be clicked
     Examples:
@@ -22,9 +22,9 @@ Feature: Login form of the application
   Scenario: 2. When user press Logout then the page will return to login
   Positive test
     Given The URL application is accessed with success
-    When User is send the valid credentials
+    When User is send the valid "Username" and "Password"
     And  User is send one "Inpatient Ward"
-    Then Login button is pressed
+    Then "Login" button is pressed
     And Logout button will be clicked
 
   @Test3
@@ -33,7 +33,7 @@ Feature: Login form of the application
     Given The URL application is accessed with success
     When User is send the invalid "<username>" and invalid "<password>" credentials
     And  User is send one "Inpatient Ward"
-    And Login button is pressed without verifying home page
+    And "Login" button is pressed without verifying home page
     Then Invalid message with invalid user/pass is returned
     Examples:
       | username | password |

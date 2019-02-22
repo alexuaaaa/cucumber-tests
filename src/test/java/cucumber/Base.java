@@ -1,6 +1,6 @@
 package cucumber;
 
-import cucumber.runner.OpenMRSTests;
+import cucumber.runner.RunnerTests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Method;
 
-public class Base extends OpenMRSTests {
+public class Base extends RunnerTests {
 
     public static String getLocator(String className, String elementName) {
         Class<?> cls = null;
@@ -22,6 +22,7 @@ public class Base extends OpenMRSTests {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return locator;
     }
 
@@ -61,6 +62,7 @@ public class Base extends OpenMRSTests {
         } else {
             page = "Not found";
         }
+
         return page;
     }
 

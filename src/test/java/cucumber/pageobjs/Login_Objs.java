@@ -11,6 +11,7 @@ public class Login_Objs {
         loginMap = new HashMap<String, String>();
         loginMap.put("Username", "username");
         loginMap.put("Password", "password");
+        loginMap.put("Login", "loginButton");
     }
 
     public static String findLocator(String elementName) {

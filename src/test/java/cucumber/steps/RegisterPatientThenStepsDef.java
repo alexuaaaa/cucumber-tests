@@ -2,8 +2,8 @@ package cucumber.steps;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
-import cucumber.classObjects.PatientDetails;
-import cucumber.runner.OpenMRSTests;
+import cucumber.classobjs.PatientDetails;
+import cucumber.runner.RunnerTests;
 import org.testng.Assert;
 
 import java.util.List;
@@ -17,6 +17,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^Register a patient button is sent$")
     public static void registerAPatientButtonIsSent() {
+
         getElementType(REGISTER_A_PATIENT_BUTTON).click();
 
         asserterPages(REGISTER_PAGE);
@@ -42,6 +43,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^The gender is provided$")
     public static void theGenderIsProvided(List<PatientDetails> patientDetailsList) {
+
         for (PatientDetails patientDetails : patientDetailsList) {
             getElementType(patientDetails.path).click();
         }
@@ -69,12 +71,14 @@ public class RegisterPatientThenStepsDef {
 
     @And("^User will send the address \"(.*)\"$")
     public static void userWillSendTheAddress(String address) {
+
         getElementType((ADDRESS_PATIENT_ID)).sendKeys(address);
         getElementType(PHONE_PATH).click();
     }
 
     @And("^User will provide the telephone \"(.*)\"$")
     public static void userWillProvideTheTelephone(Integer telephone) {
+
         getElementType(PHONE_NUMBER).sendKeys(String.valueOf(telephone));
         getElementType(RELATIVE_PATH).click();
     }
@@ -90,6 +94,7 @@ public class RegisterPatientThenStepsDef {
             getElementType(PERSONAL_NAME_PATH).sendKeys(patientDetails.lastName);
             getElementType(PERSONAL_NAME_PATH).sendKeys(" " + patientDetails.firstName);
         }
+
         getElementType(CONFIRM_BUTTON_XPATH).click();
     }
 
@@ -100,7 +105,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^Page With User Information will appear$")
     public void pageWithUserInformationWillAppear() {
-        waitForElementOrPageDisplay(OpenMRSTests.driver, GENERAL_ACTIONS_XPATH, 5);
+        waitForElementOrPageDisplay(RunnerTests.driver, GENERAL_ACTIONS_XPATH, 5);
     }
 
 //    @And("^The page contains the following data:$")
