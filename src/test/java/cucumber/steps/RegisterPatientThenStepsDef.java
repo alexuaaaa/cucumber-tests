@@ -25,7 +25,6 @@ public class RegisterPatientThenStepsDef {
     @And("^The PatientDetails with \"(.*)\" and \"(.*)\" and \"(.*)\" are set$")
     public static void theNameOfThePatientIsProvidedAndNextSectionIsSet(String givenName, String middleName, String familyName, DataTable table) {
         List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
-
         for (PatientDetails detailsPatient : patientDetails) {
             getElementType(getLocator(getCurrentPage(), givenName)).sendKeys(detailsPatient.given);
             getElementType(getLocator(getCurrentPage(), middleName)).sendKeys(detailsPatient.middle);
@@ -35,21 +34,20 @@ public class RegisterPatientThenStepsDef {
         Assert.assertTrue(getElementType(getLocator(getCurrentPage(), givenName)).isDisplayed());
         Assert.assertTrue(getElementType(getLocator(getCurrentPage(), middleName)).isDisplayed());
         Assert.assertTrue(getElementType(getLocator(getCurrentPage(), familyName)).isDisplayed());
-        Assert.assertTrue(getElementType((GENDER_BUTTON)).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).isDisplayed());
 
-        getElementType(GENDER_BUTTON).click();
+        getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).click();
     }
 
     @And("^The gender is provided$")
     public static void theGenderIsProvided(List<PatientDetails> patientDetailsList) {
-
         for (PatientDetails patientDetails : patientDetailsList) {
             getElementType(patientDetails.path).click();
         }
 
-        Assert.assertTrue(getElementType((BIRTHDAY_ID)).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).isDisplayed());
 
-        getElementType((BIRTHDAY_ID)).click();
+        getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).click();
     }
 
     @And("^The birthday is set$")
@@ -57,44 +55,44 @@ public class RegisterPatientThenStepsDef {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
         for (PatientDetails patientDetails : patientDetailsList) {
-            getElementType(DAY_ID).sendKeys(patientDetails.day);
-            getElementType(YEAR_ID).sendKeys(patientDetails.year);
+            getElementType(getLocator(getCurrentPage(), DAY_ID)).sendKeys(patientDetails.day);
+            getElementType(getLocator(getCurrentPage(), YEAR_ID)).sendKeys(patientDetails.year);
         }
 
-        Assert.assertTrue(getElementType(MONTH_ID).isDisplayed());
+        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
 
-        getElementType(MONTH_ID).click();
-        getElementType(JANUARY_PATH).click();
-        getElementType(ADDRESS_PATH).click();
+        getElementType(getLocator(getCurrentPage(), MONTH_ID)).click();
+        getElementType(getLocator(getCurrentPage(), JANUARY_PATH)).click();
+        getElementType(getLocator(getCurrentPage(), ADDRESS_PATH)).click();
     }
 
     @And("^User will send the address \"(.*)\"$")
     public static void userWillSendTheAddress(String address) {
 
-        getElementType((ADDRESS_PATIENT_ID)).sendKeys(address);
-        getElementType(PHONE_PATH).click();
+        getElementType(getLocator(getCurrentPage(), ADDRESS_PATIENT_ID)).sendKeys(address);
+        getElementType(getLocator(getCurrentPage(), PHONE_PATH)).click();
     }
 
     @And("^User will provide the telephone \"(.*)\"$")
     public static void userWillProvideTheTelephone(Integer telephone) {
 
-        getElementType(PHONE_NUMBER).sendKeys(String.valueOf(telephone));
-        getElementType(RELATIVE_PATH).click();
+        getElementType(getLocator(getCurrentPage(), PHONE_NUMBER)).sendKeys(String.valueOf(telephone));
+        getElementType(getLocator(getCurrentPage(), RELATIVE_PATH)).click();
     }
 
     @And("^User will send the patient related to$")
     public static void userWillSendThePatientRelatedTo(DataTable table) {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
-        getElementType(PATIENT_TYPE_ID).click();
-        getElementType(PATIENT_DOCTOR).click();
+        getElementType(getLocator(getCurrentPage(), PATIENT_TYPE_ID)).click();
+        getElementType(getLocator(getCurrentPage(), PATIENT_DOCTOR)).click();
 
         for (PatientDetails patientDetails : patientDetailsList) {
-            getElementType(PERSONAL_NAME_PATH).sendKeys(patientDetails.lastName);
-            getElementType(PERSONAL_NAME_PATH).sendKeys(" " + patientDetails.firstName);
+            getElementType(getLocator(getCurrentPage(), PERSONAL_NAME_PATH)).sendKeys(patientDetails.lastName);
+            getElementType(getLocator(getCurrentPage(), PERSONAL_NAME_PATH)).sendKeys(" " + patientDetails.firstName);
         }
 
-        getElementType(CONFIRM_BUTTON_XPATH).click();
+        getElementType(getLocator(getCurrentPage(), CONFIRM_BUTTON_XPATH)).click();
     }
 
     @And("^User will press confirm$")

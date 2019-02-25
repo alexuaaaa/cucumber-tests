@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.064619">
-<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="18.064619">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="15.054244">
+<testcase classname="Register a patient" name="Register a patient and after that set confirm" time="15.054244">
 <system-out><![CDATA[Given The URL application is accessed with success..........................passed
 When User is send the valid "Username" and "Password".......................passed
 And User is send one "Inpatient Ward".......................................passed
