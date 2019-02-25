@@ -1,6 +1,7 @@
 package cucumber;
 
 import static cucumber.Base.*;
+import static cucumber.Constants.FIND_PATIENT_BUTTON;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class Asserter {
@@ -11,7 +12,6 @@ public class Asserter {
     }
 
     public static void asserterDisplayedHomeButtons() {
-        assertThat("FindPatientRecord").isEqualTo(getElementType(getLocator(getCurrentPage(), "FindPatientRecord")));
         assertThat(getElementType(getLocator(getCurrentPage(), "FindPatientRecord")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "ActiveVisits")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "AppointmentScheduling")).isDisplayed());
