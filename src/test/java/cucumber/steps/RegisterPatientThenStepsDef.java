@@ -4,19 +4,18 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.classobjs.PatientDetails;
 import cucumber.runner.RunnerTests;
-import org.testng.Assert;
 
 import java.util.List;
 
 import static cucumber.Asserter.asserterPages;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
+import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef {
 
     @And("^\"(.*)\" button is sent$")
     public static void registerAPatientButtonIsSent(String registerPatient) {
-
         getElementType(getLocator(getCurrentPage(), registerPatient)).click();
 
         asserterPages(REGISTER_PAGE);
@@ -31,10 +30,10 @@ public class RegisterPatientThenStepsDef {
             getElementType(getLocator(getCurrentPage(), familyName)).sendKeys(detailsPatient.familyName);
         }
 
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), givenName)).isDisplayed());
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), middleName)).isDisplayed());
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), familyName)).isDisplayed());
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), givenName)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), middleName)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), familyName)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).isDisplayed());
 
         getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).click();
     }
@@ -45,7 +44,7 @@ public class RegisterPatientThenStepsDef {
             getElementType(patientDetails.path).click();
         }
 
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).isDisplayed());
 
         getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).click();
     }
@@ -53,13 +52,12 @@ public class RegisterPatientThenStepsDef {
     @And("^The birthday is set$")
     public static void theBirthdayIsSet(DataTable table) {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
-
         for (PatientDetails patientDetails : patientDetailsList) {
             getElementType(getLocator(getCurrentPage(), DAY_ID)).sendKeys(patientDetails.day);
             getElementType(getLocator(getCurrentPage(), YEAR_ID)).sendKeys(patientDetails.year);
         }
 
-        Assert.assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
+        assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
 
         getElementType(getLocator(getCurrentPage(), MONTH_ID)).click();
         getElementType(getLocator(getCurrentPage(), JANUARY_PATH)).click();
@@ -68,14 +66,12 @@ public class RegisterPatientThenStepsDef {
 
     @And("^User will send the address \"(.*)\"$")
     public static void userWillSendTheAddress(String address) {
-
         getElementType(getLocator(getCurrentPage(), ADDRESS_PATIENT_ID)).sendKeys(address);
         getElementType(getLocator(getCurrentPage(), PHONE_PATH)).click();
     }
 
     @And("^User will provide the telephone \"(.*)\"$")
     public static void userWillProvideTheTelephone(Integer telephone) {
-
         getElementType(getLocator(getCurrentPage(), PHONE_NUMBER)).sendKeys(String.valueOf(telephone));
         getElementType(getLocator(getCurrentPage(), RELATIVE_PATH)).click();
     }
@@ -83,7 +79,6 @@ public class RegisterPatientThenStepsDef {
     @And("^User will send the patient related to$")
     public static void userWillSendThePatientRelatedTo(DataTable table) {
         List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
-
         getElementType(getLocator(getCurrentPage(), PATIENT_TYPE_ID)).click();
         getElementType(getLocator(getCurrentPage(), PATIENT_DOCTOR)).click();
 
@@ -97,7 +92,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^User will press confirm$")
     public void userWillPressConfirm() {
-        getElementType(SUBMIT_BUTTON_ID).click();
+        getElementType(getLocator(getCurrentPage(), SUBMIT_BUTTON_ID)).click();
     }
 
     @And("^Page With User Information will appear$")
