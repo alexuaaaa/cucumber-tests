@@ -1,0 +1,310 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Register a patient and after that set confirm",
+        "description": "",
+        "id": "register-a-patient;register-a-patient-and-after-that-set-confirm",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2595363277,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The URL application is accessed with success",
+            "match": {
+              "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 225692056,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is send the valid \"Username\" and \"Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Username",
+                  "offset": 24
+                },
+                {
+                  "val": "Password",
+                  "offset": 39
+                }
+              ],
+              "location": "LoginWhenStepsDef.userIsSendTheValidCredentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102208889,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is send one \"Inpatient Ward\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Inpatient Ward",
+                  "offset": 18
+                }
+              ],
+              "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1518499212,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"Login\" button is pressed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Login",
+                  "offset": 1
+                }
+              ],
+              "location": "LoginThenStepsDef.userIsLoggedInWithSuccess(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2458329146,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "\"RegisterPatient\" button is sent",
+            "match": {
+              "arguments": [
+                {
+                  "val": "RegisterPatient",
+                  "offset": 1
+                }
+              ],
+              "location": "RegisterPatientThenStepsDef.registerAPatientButtonIsSent(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 910291831,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The PatientDetails with \"GivenName\" and \"MiddleName\" and \"FamilyName\" are set",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GivenName",
+                  "offset": 25
+                },
+                {
+                  "val": "MiddleName",
+                  "offset": 41
+                },
+                {
+                  "val": "FamilyName",
+                  "offset": 58
+                }
+              ],
+              "location": "RegisterPatientThenStepsDef.theNameOfThePatientIsProvidedAndNextSectionIsSet(String,String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Given",
+                  "Middle",
+                  "FamilyName"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Alex",
+                  "Andrei",
+                  "Albu"
+                ],
+                "line": 13
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 227932803,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The gender is provided",
+            "match": {
+              "location": "RegisterPatientThenStepsDef.theGenderIsProvided(PatientDetails\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gender",
+                  "Path"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Male",
+                  "//*[@id\u003d\"gender-field\"]/option[1]"
+                ],
+                "line": 16
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 633211817,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The birthday is set",
+            "match": {
+              "location": "RegisterPatientThenStepsDef.theBirthdayIsSet(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Day",
+                  "Year"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "10",
+                  "1990"
+                ],
+                "line": 19
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 285984849,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "User will send the address \"Bucuresti\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bucuresti",
+                  "offset": 28
+                }
+              ],
+              "location": "RegisterPatientThenStepsDef.userWillSendTheAddress(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 302350005,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "User will provide the telephone \"0734364811\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0734364811",
+                  "offset": 33
+                }
+              ],
+              "location": "RegisterPatientThenStepsDef.userWillProvideTheTelephone(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 777084078,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User will send the patient related to",
+            "match": {
+              "location": "RegisterPatientThenStepsDef.userWillSendThePatientRelatedTo(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "LastName",
+                  "FirstName"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "Albu",
+                  "Alexandru"
+                ],
+                "line": 24
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 150507269,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User will press confirm",
+            "match": {
+              "location": "RegisterPatientThenStepsDef.userWillPressConfirm()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3354694987,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Page With User Information will appear",
+            "match": {
+              "location": "RegisterPatientThenStepsDef.pageWithUserInformationWillAppear()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Test1"
+          }
+        ]
+      }
+    ],
+    "name": "Register a patient",
+    "description": "",
+    "id": "register-a-patient",
+    "keyword": "Feature",
+    "uri": "RegisterPatient.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@RegisterPatient"
+      }
+    ]
+  }
+]
