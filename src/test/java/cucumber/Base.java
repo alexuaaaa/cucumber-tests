@@ -2,14 +2,13 @@ package cucumber;
 
 import cucumber.runner.RunnerTests;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Method;
+
+import static cucumber.Constants.GENERAL_ACTIONS_XPATH;
 
 public class Base extends RunnerTests {
 
@@ -47,6 +46,23 @@ public class Base extends RunnerTests {
         return element;
     }
 
+//    public static WebElement getElement(String string) {
+//        By by = null;
+//        String locator = getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH);
+//
+//        switch (string) {
+//            case "class":
+//                by = By.className(locator);
+//                break;
+//            case "id":
+//                by = By.id(locator);
+//                break;
+//        }
+//
+//        return driver.findElement(by);
+//    }
+
+
     public static String getCurrentPage() {
         String url = driver.getCurrentUrl();
         String page = "";
@@ -68,20 +84,11 @@ public class Base extends RunnerTests {
         return page;
     }
 
-    public static void waitForPageLoad(WebDriver driver) {
-        int timeout = 10;
-        ExpectedCondition<Boolean> condition = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(condition);
-    }
 
     public static void waitForElementToLocate(By locator) {
+        WebElement element = getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH));
         int timeout = 5;
+
         new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
