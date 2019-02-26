@@ -4,12 +4,17 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.classobjs.PatientDetails;
 import cucumber.runner.RunnerTests;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static cucumber.Asserter.asserterPages;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef {
@@ -97,7 +102,9 @@ public class RegisterPatientThenStepsDef {
 
     @And("^Page With User Information will appear$")
     public void pageWithUserInformationWillAppear() {
-        waitForElementOrPageDisplay(RunnerTests.driver, GENERAL_ACTIONS_XPATH, 5);
+        waitForElementToLocate(By.xpath("//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3"));
+
+        assertThat(getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH)).isDisplayed());
     }
 
 //    @And("^The page contains the following data:$")
@@ -108,5 +115,4 @@ public class RegisterPatientThenStepsDef {
 //            verifyFieldText(row.get("Field"), row.get("Value"));
 //        }
 //    }
-
 }

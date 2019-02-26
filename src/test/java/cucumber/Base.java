@@ -2,8 +2,10 @@ package cucumber;
 
 import cucumber.runner.RunnerTests;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -66,9 +68,21 @@ public class Base extends RunnerTests {
         return page;
     }
 
-    public static void waitForElementOrPageDisplay(WebDriver driver, String locator, Integer timeOut) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+    public static void waitForPageLoad(WebDriver driver) {
+        int timeout = 10;
+        ExpectedCondition<Boolean> condition = new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(condition);
+    }
+
+    public static void waitForElementToLocate(By locator) {
+        int timeout = 5;
+        new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static void verifyFieldText(String field, String value) {
