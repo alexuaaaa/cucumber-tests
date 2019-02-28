@@ -19,6 +19,8 @@ import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef {
 
+    private static final String GENERAL_ACTION = "//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3";
+
     @And("^\"(.*)\" button is sent$")
     public static void registerAPatientButtonIsSent(String registerPatient) {
         getElementType(getLocator(getCurrentPage(), registerPatient)).click();
@@ -102,7 +104,7 @@ public class RegisterPatientThenStepsDef {
 
     @And("^Page With User Information will appear$")
     public void pageWithUserInformationWillAppear() {
-        waitForElementToLocate(By.xpath("//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3"));
+        waitForElementToLocate(GENERAL_ACTION);
 
         assertThat(getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH)).isDisplayed());
     }

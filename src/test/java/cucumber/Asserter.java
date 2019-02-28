@@ -1,7 +1,6 @@
 package cucumber;
 
 import static cucumber.Base.*;
-import static cucumber.Constants.FIND_PATIENT_BUTTON;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class Asserter {
