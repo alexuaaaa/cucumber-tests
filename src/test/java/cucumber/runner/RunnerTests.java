@@ -5,10 +5,13 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utils.PropertiesLoader;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
@@ -26,17 +29,31 @@ import org.testng.annotations.Test;
 public class RunnerTests {
 
     public static WebDriver driver;
+
     private TestNGCucumberRunner testRunner;
+
+    static {
+        try {
+            System.setProperty(PropertiesLoader.getDriver(), PropertiesLoader.getDriverExecute());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private static void webDriverToUse() {
+        if (PropertiesLoader.getDriver().contains("chrome")) {
+            driver = new ChromeDriver();
+        } else if (PropertiesLoader.getDriver().contains("gecko.driver")) {
+            FirefoxOptions options = new FirefoxOptions();
+            options.setCapability("marionette", true);
+            driver = new FirefoxDriver(options);
+        }
+    }
 
     @BeforeClass
     public void setUP() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        //      System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
 
-        driver = new ChromeDriver();
-//        FirefoxOptions options = new FirefoxOptions();
-//        options.setCapability("marionette", false);
-//        driver = new FirefoxDriver(options);
+        webDriverToUse();
 
         driver.manage().window().maximize();
 
@@ -67,4 +84,7 @@ public class RunnerTests {
             e.printStackTrace();
         }
     }
+
+
+
 }

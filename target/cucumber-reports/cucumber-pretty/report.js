@@ -161,7 +161,7 @@ formatter.match({
   "location": "LoginGivenStepsDef.theURLApplicationIsAccessedWithSuccess()"
 });
 formatter.result({
-  "duration": 2055232427,
+  "duration": 3852842308,
   "status": "passed"
 });
 formatter.match({
@@ -178,7 +178,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendTheValidCredentials(String,String)"
 });
 formatter.result({
-  "duration": 336006827,
+  "duration": 244317631,
   "status": "passed"
 });
 formatter.match({
@@ -191,7 +191,7 @@ formatter.match({
   "location": "LoginWhenStepsDef.userIsSendOneLocation(String)"
 });
 formatter.result({
-  "duration": 115470506,
+  "duration": 243932769,
   "status": "passed"
 });
 formatter.match({
@@ -204,7 +204,7 @@ formatter.match({
   "location": "LoginThenStepsDef.userIsLoggedInWithSuccess(String)"
 });
 formatter.result({
-  "duration": 1405733547,
+  "duration": 1443404226,
   "status": "passed"
 });
 formatter.match({
@@ -217,7 +217,7 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.registerAPatientButtonIsSent(String)"
 });
 formatter.result({
-  "duration": 3268269227,
+  "duration": 4117100883,
   "status": "passed"
 });
 formatter.match({
@@ -238,21 +238,21 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.theNameOfThePatientIsProvidedAndNextSectionIsSet(String,String,String,DataTable)"
 });
 formatter.result({
-  "duration": 764610133,
+  "duration": 750866473,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.theGenderIsProvided(PatientDetails\u003e)"
 });
 formatter.result({
-  "duration": 239246506,
+  "duration": 584769329,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.theBirthdayIsSet(DataTable)"
 });
 formatter.result({
-  "duration": 587760213,
+  "duration": 1047273793,
   "status": "passed"
 });
 formatter.match({
@@ -265,7 +265,7 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillSendTheAddress(String)"
 });
 formatter.result({
-  "duration": 269141334,
+  "duration": 357177342,
   "status": "passed"
 });
 formatter.match({
@@ -278,28 +278,28 @@ formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillProvideTheTelephone(Integer)"
 });
 formatter.result({
-  "duration": 241367894,
+  "duration": 387257243,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillSendThePatientRelatedTo(DataTable)"
 });
 formatter.result({
-  "duration": 656761173,
+  "duration": 1075601292,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.userWillPressConfirm()"
 });
 formatter.result({
-  "duration": 146417920,
+  "duration": 295840291,
   "status": "passed"
 });
 formatter.match({
   "location": "RegisterPatientThenStepsDef.pageWithUserInformationWillAppear()"
 });
 formatter.result({
-  "duration": 4354274987,
+  "duration": 4848410843,
   "status": "passed"
 });
 });

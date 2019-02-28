@@ -14,12 +14,11 @@ import java.util.concurrent.TimeUnit;
 import static cucumber.Asserter.asserterPages;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
+import static cucumber.pageobjs.PatientPageObjs.GENERAL_ACTION;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef {
-
-    private static final String GENERAL_ACTION = "//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3";
 
     @And("^\"(.*)\" button is sent$")
     public static void registerAPatientButtonIsSent(String registerPatient) {
