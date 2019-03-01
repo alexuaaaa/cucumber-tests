@@ -24,5 +24,6 @@ Feature: Register a patient
       | Albu     | Alexandru |
     And User will press confirm
     And Page With User Information will appear
-#    And The page contains the following data
-#    |||
+    And The page contains the following data
+      | Field       | Value           |
+      | PatientName | GivenFamilyName |

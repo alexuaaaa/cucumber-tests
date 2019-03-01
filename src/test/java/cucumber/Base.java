@@ -1,6 +1,6 @@
 package cucumber;
 
-import cucumber.runner.RunnerTests;
+import cucumber.runner.RunnerTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Method;
 
-public class Base extends RunnerTests {
+public class Base extends RunnerTest {
 
     public static String getLocator(String className, String elementName) {
         Class<?> cls = null;
@@ -80,8 +80,5 @@ public class Base extends RunnerTests {
         }
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
-
-    public static void verifyFieldText(String field, String value) {
     }
 }

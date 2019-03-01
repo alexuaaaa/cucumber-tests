@@ -26,13 +26,14 @@ import utils.PropertiesLoader;
                         "rerun:target/cucumber-reports/re-run.txt",
                         "junit:target/cucumber-reports/Cucumber.xml"}
 )
-public class RunnerTests {
+public class RunnerTest {
 
     public static WebDriver driver;
 
     private TestNGCucumberRunner testRunner;
 
     static {
+
         try {
             System.setProperty(PropertiesLoader.getDriver(), PropertiesLoader.getDriverExecute());
         } catch (Exception e) {
@@ -57,7 +58,7 @@ public class RunnerTests {
 
         driver.manage().window().maximize();
 
-        testRunner = new TestNGCucumberRunner(RunnerTests.class);
+        testRunner = new TestNGCucumberRunner(RunnerTest.class);
     }
 
     @Test(dataProvider = "features")
@@ -84,7 +85,6 @@ public class RunnerTests {
             e.printStackTrace();
         }
     }
-
 
 
 }

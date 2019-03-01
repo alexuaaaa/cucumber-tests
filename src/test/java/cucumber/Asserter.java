@@ -1,5 +1,7 @@
 package cucumber;
 
+import org.openqa.selenium.WebElement;
+
 import static cucumber.Base.*;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
@@ -20,4 +22,13 @@ public class Asserter {
         assertThat(getElementType(getLocator(getCurrentPage(), "SystemAdministration")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "RegisterPatient")).isDisplayed());
     }
+
+    public static void asserterVerifyFields(String field, String value) {
+        WebElement element = getElementType(getLocator(getCurrentPage(), value));
+
+        assertThat(element).isNotNull();
+        assertThat(element.isDisplayed());
+    }
+
+
 }

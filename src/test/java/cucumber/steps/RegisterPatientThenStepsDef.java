@@ -3,15 +3,12 @@ package cucumber.steps;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.classobjs.PatientDetails;
-import cucumber.runner.RunnerTests;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.Map;
 
 import static cucumber.Asserter.asserterPages;
+import static cucumber.Asserter.asserterVerifyFields;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
 import static cucumber.pageobjs.PatientPageObjs.GENERAL_ACTION;
@@ -108,12 +105,12 @@ public class RegisterPatientThenStepsDef {
         assertThat(getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH)).isDisplayed());
     }
 
-//    @And("^The page contains the following data:$")
-//    public void pageContainsData(DataTable data) {
-//        List<Map<String, String>> content = data.asMaps(String.class, String.class);
-//
-//        for (Map<String, String> row : content) {
-//            verifyFieldText(row.get("Field"), row.get("Value"));
-//        }
-//    }
+    @And("^The page contains the following data$")
+    public void pageContainsData(DataTable data) {
+        List<Map<String, String>> content = data.asMaps(String.class, String.class);
+
+        for (Map<String, String> row : content) {
+            asserterVerifyFields(row.get("Field"), row.get("Value"));
+        }
+    }
 }

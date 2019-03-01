@@ -3,7 +3,7 @@
 <suite name="Suite" verbose="5">
     <test name="Test">
         <classes>
-            <class name="cucumber.runner.RunnerTests"/>
+            <class name="cucumber.runner.RunnerTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

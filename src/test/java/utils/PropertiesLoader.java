@@ -9,6 +9,7 @@ public class PropertiesLoader {
     private static Properties props;
 
     static {
+
         try {
             String envFile = System.getProperty("env");
             String filePath = "environments/".concat(envFile.concat(".properties"));
@@ -17,6 +18,7 @@ public class PropertiesLoader {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public static String getDriver() {
