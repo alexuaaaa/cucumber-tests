@@ -18,7 +18,6 @@ public class PropertiesLoader {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static String getDriver() {

@@ -15,7 +15,7 @@
         <cucumber-java.version>1.2.5</cucumber-java.version>
         <cucumber-jvm-deps.version>1.0.5</cucumber-jvm-deps.version>
         <assertj-core.version>3.12.0</assertj-core.version>
-        <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>2.17</maven-surefire-plugin.version>
         <maven-cucumber-reporting.version>4.4.0</maven-cucumber-reporting.version>
         <jackson-mapper-asl.version>1.9.11</jackson-mapper-asl.version>
         <maven.compiler.plugin.version>3.6.2</maven.compiler.plugin.version>
