@@ -38,9 +38,10 @@ public class Base extends RunnerTest {
             element = driver.findElement(By.xpath(locator));
         else if (locator.contains("@"))
             element = driver.findElement(By.xpath(locator));
-        else
+        else if (locator.contains("#"))
             element = driver.findElement(By.cssSelector(locator));
-
+        else
+            element = driver.findElement(By.className(locator));
         return element;
     }
 

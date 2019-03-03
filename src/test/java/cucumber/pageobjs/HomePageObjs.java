@@ -8,7 +8,7 @@ public class HomePageObjs {
     private static final Map<String, String> homeMap;
 
     static {
-        homeMap = new HashMap<String, String>();
+        homeMap = new HashMap<>();
         homeMap.put("LoggedInMessage", "home-container");
         homeMap.put("FindPatientRecord", "coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension");
         homeMap.put("ActiveVisits", "org-openmrs-module-coreapps-activeVisitsHomepageLink-org-openmrs-module-coreapps-activeVisitsHomepageLink-extension");

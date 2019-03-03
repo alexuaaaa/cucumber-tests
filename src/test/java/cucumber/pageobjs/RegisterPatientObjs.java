@@ -8,7 +8,7 @@ public class RegisterPatientObjs {
     private static final Map<String, String> registerPatientMap;
 
     static {
-        registerPatientMap = new HashMap<String, String>();
+        registerPatientMap = new HashMap<>();
         registerPatientMap.put("GivenName", "givenName");
         registerPatientMap.put("MiddleName", "middleName");
         registerPatientMap.put("FamilyName", "familyName");

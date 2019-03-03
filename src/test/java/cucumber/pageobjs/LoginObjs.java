@@ -8,7 +8,7 @@ public class LoginObjs {
     private static final Map<String, String> loginMap;
 
     static {
-        loginMap = new HashMap<String, String>();
+        loginMap = new HashMap<>();
         loginMap.put("Username", "username");
         loginMap.put("Password", "password");
         loginMap.put("Login", "loginButton");

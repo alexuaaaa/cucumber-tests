@@ -25,5 +25,16 @@ Feature: Register a patient
     And User will press confirm
     And Page With User Information will appear
     And The page contains the following data
-      | Field       | Value           |
-      | PatientName | GivenFamilyName |
+      | Field                | Value           |
+      | PatientName          | GivenFamilyName |
+      | DIAGNOSES            | Diagnoses       |
+      | InfoPageGeneral      | GeneralInfo     |
+      | RECENT_VISITS        | RecentVisits    |
+      | VITALS               | Vitals          |
+      | LATEST_OBSERVATIONS  | LatestObs       |
+      | HEALTH_TREND_SUMMARY | HealthTrend     |
+      | WEIGHT_GRAPH         | WeightGraph     |
+      | APPOINTMENTS         | Appointment     |
+      | FAMILY               | Family          |
+      | CONDITIONS           | Conditions      |
+      | ALLERGIES            | Allergies       |
