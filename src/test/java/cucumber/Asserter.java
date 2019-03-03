@@ -25,7 +25,9 @@ public class Asserter {
 
     public static void asserterVerifyFields(String field, String value) {
         WebElement element = getElementType(getLocator(getCurrentPage(), value));
+        String locator = getLocator(getCurrentPage(), value);
 
+        assertThat(getCurrentPage().contains(value)).isTrue();
         assertThat(element).isNotNull();
         assertThat(element.isDisplayed());
     }

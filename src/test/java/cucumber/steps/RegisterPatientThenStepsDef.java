@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 import static cucumber.Asserter.asserterPages;
-import static cucumber.Asserter.asserterVerifyFields;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
 import static cucumber.pageobjs.PatientPageObjs.GENERAL_ACTION;
@@ -108,9 +107,12 @@ public class RegisterPatientThenStepsDef {
     @And("^The page contains the following data$")
     public void pageContainsData(DataTable data) {
         List<Map<String, String>> content = data.asMaps(String.class, String.class);
+        final String url = driver.getPageSource();
 
         for (Map<String, String> row : content) {
-            asserterVerifyFields(row.get("Field"), row.get("Value"));
+            String locator = getLocator(getCurrentPage(), row.get("Value"));
+
+            assertThat(url.contains(locator)).isTrue();
         }
     }
 }

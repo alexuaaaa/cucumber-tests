@@ -10,18 +10,18 @@ public class PatientPageObjs {
 
     static {
         patientPageMap = new HashMap<>();
-        patientPageMap.put("GeneralInfo", "//*[@id=\"content\"]/div[9]/div/div[3]/div/ul/h3");
-        patientPageMap.put("GivenFamilyName", "//*[@id=\"content\"]/div[6]/div[1]/h1");
-        patientPageMap.put("Diagnoses", "//*[@id=\"coreapps-diagnosesList\"]/div[1]/h3");
-        patientPageMap.put("RecentVisits", "info-header");
-        patientPageMap.put("Vitals", "//*[@id=\"coreapps-mostRecentVitals\"]/div[1]");
-        patientPageMap.put("LatestObs", "//*[@id=\"coreapps-fr690\"]/div[1]/h3");
-        patientPageMap.put("HealthTrend", "//*[@id=\"coreapps-fr8485\"]/div[1]/h3");
-        patientPageMap.put("WeightGraph", "//*[@id=\"coreapps-fr5620\"]/div[1]/h3");
-        patientPageMap.put("Appointment", "//*[@id=\"content\"]/div[9]/div/div[1]/div[6]/div[1]/h3");
-        patientPageMap.put("Family", "//*[@id=\"coreapps-fr687\"]/div[1]/h3");
-        patientPageMap.put("Conditions", "//*[@id=\"content\"]/div[9]/div/div[2]/div[3]/div[1]/h3");
-        patientPageMap.put("Allergies", "//*[@id=\"content\"]/div[9]/div/div[2]/div[4]/div[1]/h3");
+        patientPageMap.put("GeneralInfo", "content");
+        patientPageMap.put("GivenFamilyName", "Alex Andrei Albu");
+        patientPageMap.put("Diagnoses", "DIAGNOSES");
+        patientPageMap.put("RecentVisits", "RECENT VISITS");
+        patientPageMap.put("Vitals", "VITALS");
+        patientPageMap.put("LatestObs", "LATEST OBSERVATIONS");
+        patientPageMap.put("HealthTrend", "HEALTH TREND SUMMARY");
+        patientPageMap.put("WeightGraph", "WEIGHT GRAPH");
+        patientPageMap.put("Appointment", "APPOINTMENTS");
+        patientPageMap.put("Family", "FAMILY");
+        patientPageMap.put("Conditions", "CONDITIONS");
+        patientPageMap.put("Allergies", "ALLERGIES");
     }
 
     public static String findLocator(String elementName) {
