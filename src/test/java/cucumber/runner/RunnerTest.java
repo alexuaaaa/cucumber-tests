@@ -3,15 +3,17 @@ package cucumber.runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.*;
 import utils.PropertiesLoader;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
@@ -28,34 +30,25 @@ import utils.PropertiesLoader;
 )
 public class RunnerTest {
 
-    public static WebDriver driver;
+    public static RemoteWebDriver driver;
 
     private TestNGCucumberRunner testRunner;
 
-    static {
-
-        try {
-            System.setProperty(PropertiesLoader.getDriver(), PropertiesLoader.getDriverExecute());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private static void webDriverToUse() {
-        if (PropertiesLoader.getDriver().contains("chrome")) {
-            driver = new ChromeDriver();
-        } else if (PropertiesLoader.getDriver().contains("gecko.driver")) {
-            FirefoxOptions options = new FirefoxOptions();
-            options.setCapability("marionette", true);
-            driver = new FirefoxDriver(options);
-        }
-    }
-
+    @Parameters({"browserType"})
     @BeforeClass
-    public void setUP() {
+    public void setUP(String browserType) throws MalformedURLException {
 
-        webDriverToUse();
+        DesiredCapabilities dr;
 
+        if (browserType.equals("firefox")) {
+            dr = DesiredCapabilities.firefox();
+        } else if (browserType.equals("chrome")) {
+            dr = DesiredCapabilities.chrome();
+        } else {
+            dr = DesiredCapabilities.internetExplorer();
+        }
+
+        driver = new RemoteWebDriver(new URL("http://localhost:5556/wd/hub"), dr);
         driver.manage().window().maximize();
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
