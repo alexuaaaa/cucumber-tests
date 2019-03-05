@@ -3,6 +3,7 @@ package cucumber;
 import org.openqa.selenium.WebElement;
 
 import static cucumber.Base.*;
+import static cucumber.pageobjs.PatientPageObjs.GENERAL_ACTION;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class Asserter {

@@ -9,7 +9,6 @@ public class PropertiesLoader {
     private static Properties props;
 
     static {
-
         try {
             String filePath = "environments/application.properties";
             props = new Properties();

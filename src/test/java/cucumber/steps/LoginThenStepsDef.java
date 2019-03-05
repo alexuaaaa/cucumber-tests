@@ -2,7 +2,6 @@ package cucumber.steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import org.testng.Assert;
 
 import static cucumber.Asserter.asserterDisplayedHomeButtons;
 import static cucumber.Asserter.asserterPages;
@@ -44,6 +43,6 @@ public class LoginThenStepsDef {
     public static void messageWithInvalidCredentialsIsReturned(String errorMessageLogin) {
         String expectedMessage = getElementType(getLocator(getCurrentPage(), errorMessageLogin)).getText();
 
-       assertEquals(INVALID_MESSAGE_CREDENTIALS, expectedMessage, "Message is not equal in invalid is logged");
+        assertEquals(INVALID_MESSAGE_CREDENTIALS, expectedMessage, "Message is not equal in invalid is logged");
     }
 }

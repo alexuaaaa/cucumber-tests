@@ -7,16 +7,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import static utils.PropertiesLoader.getSeleniumGridNodeURL;
-import static utils.PropertiesLoader.getURLApplication;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
-        tags = {"@RegisterPatient"},/*tags means that specific feature is tested, or scenario*/
+        // tags = {"@RegisterPatient"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         /*monochrome = true displays the output in a readable format*/
         format = // generate format report
@@ -32,29 +30,21 @@ public class RunnerTest {
 
     private TestNGCucumberRunner testRunner;
 
-    @Parameters({"browserType"})
+    @Parameters({"browserType", "version", "platform"})
     @BeforeClass
-    public void setUP(String browserType) throws MalformedURLException {
+    public void setUP(String browserType, String version, String platform) throws Exception {
+        DesiredCapabilities capability;
 
-        DesiredCapabilities dr = null;
+        capability = gridSet(browserType, version, platform);
 
-        if (browserType.equals("firefox")) {
-            dr = DesiredCapabilities.firefox();
-        } else if (browserType.equals("chrome")) {
-            dr = DesiredCapabilities.chrome();
-        } else if (browserType.equals("explorer")) {
-            dr = DesiredCapabilities.internetExplorer();
-        }
-
-        driver = new RemoteWebDriver(new URL(getSeleniumGridNodeURL()), dr);
-        driver.manage().window().maximize();
-        driver.get(getURLApplication());
+        driver = new RemoteWebDriver(new URL(getSeleniumGridNodeURL()), capability);
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
     }
 
     @Test(dataProvider = "features")
     public void runFeatures(CucumberFeatureWrapper cFeature) {
+        sleep();
         testRunner.runCucumber(cFeature.getCucumberFeature());
     }
 
@@ -70,9 +60,36 @@ public class RunnerTest {
         driver.quit();
     }
 
-    private static void sleep() {
+    public DesiredCapabilities gridSet(String browser, String version, String os) {
+        DesiredCapabilities capability = null;
+        if (browser.equals("firefox")) {
+            capability = DesiredCapabilities.firefox();
+            capability.setBrowserName("firefox");
+            capability.setVersion(version);
+        }
+
+        if (browser.equals("chrome")) {
+            System.out.println("Test scripts running on chrome");
+            capability = DesiredCapabilities.chrome();
+            capability.setBrowserName("chrome");
+            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            capability.setVersion(version);
+        }
+        if (os.equals("WINDOWS")) {
+            capability.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+        } else if (os.equals("XP")) {
+            capability.setPlatform(org.openqa.selenium.Platform.XP);
+        } else if (os.equals("Linux")) {
+            capability.setPlatform(org.openqa.selenium.Platform.LINUX);
+        } else {
+            capability.setPlatform(org.openqa.selenium.Platform.ANY);
+        }
+        return capability;
+    }
+
+    public static void sleep() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (Exception e) {
             e.printStackTrace();
         }
