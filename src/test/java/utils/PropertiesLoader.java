@@ -11,8 +11,7 @@ public class PropertiesLoader {
     static {
 
         try {
-            String envFile = System.getProperty("env");
-            String filePath = "environments/".concat(envFile.concat(".properties"));
+            String filePath = "environments/application.properties";
             props = new Properties();
             props.load(EnvironmentUtils.class.getClassLoader().getResourceAsStream(filePath));
         } catch (Exception e) {
@@ -20,11 +19,11 @@ public class PropertiesLoader {
         }
     }
 
-    public static String getDriver() {
-        return props.getProperty("driver");
+    public static String getURLApplication() {
+        return props.getProperty("application.demo.url");
     }
 
-    public static String getDriverExecute() {
-        return props.getProperty("driver.execute");
+    public static String getSeleniumGridNodeURL() {
+        return props.getProperty("selenium.grid.node.url");
     }
 }

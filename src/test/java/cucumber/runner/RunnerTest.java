@@ -3,17 +3,15 @@ package cucumber.runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
-import utils.PropertiesLoader;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static utils.PropertiesLoader.getSeleniumGridNodeURL;
+import static utils.PropertiesLoader.getURLApplication;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
@@ -38,18 +36,19 @@ public class RunnerTest {
     @BeforeClass
     public void setUP(String browserType) throws MalformedURLException {
 
-        DesiredCapabilities dr;
+        DesiredCapabilities dr = null;
 
         if (browserType.equals("firefox")) {
             dr = DesiredCapabilities.firefox();
         } else if (browserType.equals("chrome")) {
             dr = DesiredCapabilities.chrome();
-        } else {
+        } else if (browserType.equals("explorer")) {
             dr = DesiredCapabilities.internetExplorer();
         }
 
-        driver = new RemoteWebDriver(new URL("http://localhost:5556/wd/hub"), dr);
+        driver = new RemoteWebDriver(new URL(getSeleniumGridNodeURL()), dr);
         driver.manage().window().maximize();
+        driver.get(getURLApplication());
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
     }
@@ -78,6 +77,4 @@ public class RunnerTest {
             e.printStackTrace();
         }
     }
-
-
 }
