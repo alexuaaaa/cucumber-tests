@@ -3,6 +3,7 @@ package cucumber.runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
@@ -40,6 +41,7 @@ public class RunnerTest {
 
         if (browserType.equals("firefox")) {
             dr = DesiredCapabilities.firefox();
+            dr.setCapability("marionette", true);
         } else if (browserType.equals("chrome")) {
             dr = DesiredCapabilities.chrome();
         } else if (browserType.equals("explorer")) {
