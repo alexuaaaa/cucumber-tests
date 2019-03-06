@@ -3,18 +3,21 @@ package cucumber.runner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
 import java.net.URL;
 
-import static utils.PropertiesLoader.getSeleniumGridNodeURL;
+import static utils.PropertiesLoader.getSeleniumGridNodeOneURL;
+import static utils.PropertiesLoader.getSeleniumGridNodeTwoURL;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
-        // tags = {"@RegisterPatient"},/*tags means that specific feature is tested, or scenario*/
+        tags = {"@Login_Test3"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         /*monochrome = true displays the output in a readable format*/
         format = // generate format report
@@ -26,25 +29,24 @@ import static utils.PropertiesLoader.getSeleniumGridNodeURL;
 )
 public class RunnerTest {
 
-    public static RemoteWebDriver driver;
+    private static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<>();
 
     private TestNGCucumberRunner testRunner;
 
-    @Parameters({"browserType", "version", "platform"})
+    @Parameters({"browserType", "platform"})
     @BeforeClass
-    public void setUP(String browserType, String version, String platform) throws Exception {
-        DesiredCapabilities capability;
-
-        capability = gridSet(browserType, version, platform);
-
-        driver = new RemoteWebDriver(new URL(getSeleniumGridNodeURL()), capability);
+    public void setUP(String browserType, String platform) {
+        try {
+            getSeleniumGridCapabilities(browserType, platform);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
     }
 
     @Test(dataProvider = "features")
     public void runFeatures(CucumberFeatureWrapper cFeature) {
-        sleep();
         testRunner.runCucumber(cFeature.getCucumberFeature());
     }
 
@@ -57,37 +59,49 @@ public class RunnerTest {
     public void tearDown() {
         testRunner.finish();
         sleep();
-        driver.quit();
+        getDriver().quit();
     }
 
-    public DesiredCapabilities gridSet(String browser, String version, String os) {
+    private static void getSeleniumGridCapabilities(String browserType, String platform) throws Exception {
+        RemoteWebDriver driver = null;
         DesiredCapabilities capability = null;
-        if (browser.equals("firefox")) {
-            capability = DesiredCapabilities.firefox();
-            capability.setBrowserName("firefox");
-            capability.setVersion(version);
-        }
 
-        if (browser.equals("chrome")) {
-            System.out.println("Test scripts running on chrome");
+        if (browserType.equals("chrome")) {
             capability = DesiredCapabilities.chrome();
             capability.setBrowserName("chrome");
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-            capability.setVersion(version);
+            capability.setPlatform(Platform.extractFromSysProperty(platform));
+
+            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeOneURL() + "/wd/hub"), capability);
+
+        } else if (browserType.equals("firefox")) {
+            capability = DesiredCapabilities.firefox();
+            capability.setBrowserName("firefox");
+
+            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeTwoURL() + "/wd/hub"), capability);
         }
-        if (os.equals("WINDOWS")) {
+
+        if (platform.equals("WINDOWS")) {
             capability.setPlatform(org.openqa.selenium.Platform.WINDOWS);
-        } else if (os.equals("XP")) {
+        } else if (platform.equals("XP")) {
             capability.setPlatform(org.openqa.selenium.Platform.XP);
-        } else if (os.equals("Linux")) {
+        } else if (platform.equals("Linux")) {
             capability.setPlatform(org.openqa.selenium.Platform.LINUX);
         } else {
             capability.setPlatform(org.openqa.selenium.Platform.ANY);
         }
-        return capability;
+
+        setWebDriver(driver);
     }
 
-    public static void sleep() {
+    private static void setWebDriver(RemoteWebDriver driver) {
+        dr.set(driver);
+    }
+
+    public static WebDriver getDriver() {
+        return dr.get();
+    }
+
+    private static void sleep() {
         try {
             Thread.sleep(1000);
         } catch (Exception e) {

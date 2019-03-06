@@ -11,8 +11,8 @@ public class LoginObjs {
         loginMap = new HashMap<>();
         loginMap.put("Username", "username");
         loginMap.put("Password", "password");
-        loginMap.put("Login", "loginButton");
-        loginMap.put("LoginInvalidMessage", "error-message");
+        loginMap.put("Login", "//*[@id=\"loginPortlet\"]/div/form/table/tbody/tr[3]/td[2]/input");
+        loginMap.put("LoginInvalidMessage", "openmrs_error");
     }
 
     public static String findLocator(String elementName) {

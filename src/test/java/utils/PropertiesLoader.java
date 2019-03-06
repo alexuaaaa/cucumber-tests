@@ -22,7 +22,11 @@ public class PropertiesLoader {
         return props.getProperty("application.demo.url");
     }
 
-    public static String getSeleniumGridNodeURL() {
-        return props.getProperty("selenium.grid.node.url");
+    public static String getSeleniumGridNodeOneURL() {
+        return props.getProperty("selenium.grid.node.url.one");
+    }
+
+    public static String getSeleniumGridNodeTwoURL() {
+        return props.getProperty("selenium.grid.node.url.two");
     }
 }

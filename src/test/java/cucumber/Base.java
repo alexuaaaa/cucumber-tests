@@ -28,25 +28,25 @@ public class Base extends RunnerTest {
     public static WebElement getElementType(String locator) {
         WebElement element;
 
-        String pageSource = driver.getPageSource();
+        String pageSource = getDriver().getPageSource();
 
         if (pageSource.contains("id=\"" + locator + "\""))
-            element = driver.findElement(By.id(locator));
+            element = getDriver().findElement(By.id(locator));
         else if (pageSource.contains("name=\"" + locator + "\""))
-            element = driver.findElement(By.name(locator));
+            element = getDriver().findElement(By.name(locator));
         else if (pageSource.contains("html"))
-            element = driver.findElement(By.xpath(locator));
+            element = getDriver().findElement(By.xpath(locator));
         else if (locator.contains("@"))
-            element = driver.findElement(By.xpath(locator));
+            element = getDriver().findElement(By.xpath(locator));
         else if (locator.contains("#"))
-            element = driver.findElement(By.cssSelector(locator));
+            element = getDriver().findElement(By.cssSelector(locator));
         else
-            element = driver.findElement(By.className(locator));
+            element = getDriver().findElement(By.className(locator));
         return element;
     }
 
     public static String getCurrentPage() {
-        String url = driver.getCurrentUrl();
+        String url = getDriver().getCurrentUrl();
         String page = "";
 
         if (url.contains("login.htm")) {
@@ -70,7 +70,7 @@ public class Base extends RunnerTest {
         int timeout = 1000;
         By by = null;
 
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebDriverWait wait = new WebDriverWait(getDriver(), timeout);
 
         if (element.contains("id=\"" + "\"")) {
             by = By.id(element);

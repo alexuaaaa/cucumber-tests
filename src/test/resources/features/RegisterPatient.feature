@@ -1,7 +1,7 @@
 @RegisterPatient
 Feature: Register a patient
 
-  @Test1
+  @RegisterPatient_Test1
   Scenario: Register a patient and after that set confirm
     Given The URL application is accessed with success
     When User is send the valid "Username" and "Password"

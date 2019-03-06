@@ -3,15 +3,13 @@
 <suite name="Suite" parallel="tests" thread-count="2">
     <test name="Test with Firefox">
         <parameter name="browserType" value="firefox"/>
-        <parameter name="version" value="65.0.2"/>
         <parameter name="platform" value="WINDOWS"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>
         </classes>
     </test> <!-- Test -->
-    <test name="Test with Chrome" >
+    <test name="Test with Chrome">
         <parameter name="browserType" value="chrome"/>
-        <parameter name="version" value="72.0.3626.109"/>
         <parameter name="platform" value="WINDOWS"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>

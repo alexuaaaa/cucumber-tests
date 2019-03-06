@@ -107,7 +107,7 @@ public class RegisterPatientThenStepsDef {
     @And("^The page contains the following data$")
     public void pageContainsData(DataTable data) {
         List<Map<String, String>> content = data.asMaps(String.class, String.class);
-        final String url = driver.getPageSource();
+        final String url = getDriver().getPageSource();
 
         for (Map<String, String> row : content) {
             String locator = getLocator(getCurrentPage(), row.get("Value"));
