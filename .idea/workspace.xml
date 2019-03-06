@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="293d0e2c-f7cd-4b61-85dc-70457df21bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Asserter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Asserter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/LoginGivenStepsDef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/steps/RegisterPatientThenStepsDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/steps/RegisterPatientThenStepsDef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertiesLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/environments/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/environments/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/RegisterPatient.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/RegisterPatient.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,16 +43,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="224">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2484#2485#0" expanded="true" />
                 <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2216#2217#0" expanded="true" />
+                <element signature="e#2101#2102#0" expanded="true" />
                 <element signature="e#2923#2924#0" expanded="true" />
                 <element signature="e#2953#2954#0" expanded="true" />
                 <element signature="e#2954#2955#0" expanded="true" />
@@ -73,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/utils/PropertiesLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state relative-caret-position="472">
+              <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#545#546#0" expanded="true" />
@@ -83,16 +74,18 @@
                 <element signature="e#728#729#0" expanded="true" />
                 <element signature="e#790#791#0" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/environments/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+            <state relative-caret-position="60">
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -109,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            <state relative-caret-position="340">
+              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -200,10 +193,10 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/RegisterPatient.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/pageobjs/LoginObjs.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/utils/PropertiesLoader.java" />
         <option value="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/environments/application.properties" />
-        <option value="$PROJECT_DIR$/testng.xml" />
       </list>
     </option>
   </component>
@@ -370,7 +363,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551886153643" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551887547283" />
     <property name="last_opened_file_path" value="E:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -595,28 +588,17 @@
       <option name="project" value="LOCAL" />
       <updated>1551781429937</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="running selenium grid capabilities">
+      <created>1551886237591</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551886237591</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 06m 55s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 07m 36s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 08m 15s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 08m 45s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 11m 54s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 12m 22s.xml">
-      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 17m 16s.xml">
       <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
@@ -629,15 +611,32 @@
     <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 24m 18s.xml">
       <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 28m 45s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 29m 39s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 48m 32s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 49m 03s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 51m 31s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__cucumber-tests_testng_xml - 2019.03.06 at 17h 52m 20s.xml">
+      <configuration name="C:/cucumber-tests/testng.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86222000" />
+    <option name="totallyTimeSpent" value="87527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21938232" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21938232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -648,7 +647,7 @@
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.1738661" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.3099352" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4611231" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -713,7 +712,8 @@
     <MESSAGE value="added also patient page objs data table" />
     <MESSAGE value="changed to surefire version" />
     <MESSAGE value="refactor for application properties set" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor for application properties set" />
+    <MESSAGE value="running selenium grid capabilities" />
+    <option name="LAST_COMMIT_MESSAGE" value="running selenium grid capabilities" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -1106,10 +1106,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/utils/PropertiesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        <state relative-caret-position="472">
+          <caret line="28" column="42" lean-forward="true" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#545#546#0" expanded="true" />
@@ -1118,38 +1125,32 @@
             <element signature="e#728#729#0" expanded="true" />
             <element signature="e#790#791#0" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2923#2924#0" expanded="true" />
+            <element signature="e#2953#2954#0" expanded="true" />
+            <element signature="e#2954#2955#0" expanded="true" />
+            <element signature="e#2985#2986#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/environments/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="70" column="48" lean-forward="true" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2484#2485#0" expanded="true" />
-            <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
-            <element signature="e#2923#2924#0" expanded="true" />
-            <element signature="e#2953#2954#0" expanded="true" />
-            <element signature="e#2954#2955#0" expanded="true" />
-            <element signature="e#2985#2986#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
         </state>
       </provider>
     </entry>

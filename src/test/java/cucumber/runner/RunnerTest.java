@@ -11,8 +11,7 @@ import org.testng.annotations.*;
 
 import java.net.URL;
 
-import static utils.PropertiesLoader.getSeleniumGridNodeOneURL;
-import static utils.PropertiesLoader.getSeleniumGridNodeTwoURL;
+import static utils.PropertiesLoader.*;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
@@ -71,13 +70,13 @@ public class RunnerTest {
             capability.setBrowserName("chrome");
             capability.setPlatform(Platform.extractFromSysProperty(platform));
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeOneURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(getSeleniumGridHubURL() + "/wd/hub"), capability);
 
         } else if (browserType.equals("firefox")) {
             capability = DesiredCapabilities.firefox();
             capability.setBrowserName("firefox");
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeTwoURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(getSeleniumGridHubURL() + "/wd/hub"), capability);
         }
 
         if (platform.equals("WINDOWS")) {

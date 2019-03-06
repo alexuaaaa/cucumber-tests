@@ -29,4 +29,8 @@ public class PropertiesLoader {
     public static String getSeleniumGridNodeTwoURL() {
         return props.getProperty("selenium.grid.node.url.two");
     }
+
+    public static String getSeleniumGridHubURL() {
+        return props.getProperty("selenium.hub.url");
+    }
 }
