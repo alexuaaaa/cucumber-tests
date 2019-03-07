@@ -4,7 +4,6 @@
     <list default="true" id="293d0e2c-f7cd-4b61-85dc-70457df21bd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/environments/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/environments/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,13 +44,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+            <state relative-caret-position="204">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2484#2485#0" expanded="true" />
                 <element signature="e#2553#2554#0" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
                 <element signature="e#2923#2924#0" expanded="true" />
                 <element signature="e#2953#2954#0" expanded="true" />
                 <element signature="e#2954#2955#0" expanded="true" />
@@ -363,7 +362,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551968037115" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551968360034" />
     <property name="last_opened_file_path" value="E:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -602,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551887571576</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added different url to nodes">
+      <created>1551968332516</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551968332516</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -638,7 +644,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96507000" />
+    <option name="totallyTimeSpent" value="97025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -722,7 +728,8 @@
     <MESSAGE value="refactor for application properties set" />
     <MESSAGE value="running selenium grid capabilities" />
     <MESSAGE value="added grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="added grid" />
+    <MESSAGE value="added different url to nodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added different url to nodes" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -1149,13 +1156,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cucumber/runner/RunnerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+        <state relative-caret-position="204">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2484#2485#0" expanded="true" />
             <element signature="e#2553#2554#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
             <element signature="e#2923#2924#0" expanded="true" />
             <element signature="e#2953#2954#0" expanded="true" />
             <element signature="e#2954#2955#0" expanded="true" />

@@ -11,7 +11,8 @@ import org.testng.annotations.*;
 
 import java.net.URL;
 
-import static utils.PropertiesLoader.*;
+import static utils.PropertiesLoader.getSeleniumGridNodeOneURL;
+import static utils.PropertiesLoader.getSeleniumGridNodeTwoURL;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
@@ -34,12 +35,9 @@ public class RunnerTest {
 
     @Parameters({"browserType", "platform"})
     @BeforeClass
-    public void setUP(String browserType, String platform) {
-        try {
-            getSeleniumGridCapabilities(browserType, platform);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void setUP(String browserType, String platform) throws Exception {
+        getSeleniumGridCapabilities(browserType, platform);
+
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
     }
@@ -54,7 +52,7 @@ public class RunnerTest {
         return testRunner.provideFeatures();
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         testRunner.finish();
         sleep();
