@@ -11,9 +11,6 @@ import org.testng.annotations.*;
 
 import java.net.URL;
 
-import static utils.PropertiesLoader.getSeleniumGridNodeOneURL;
-import static utils.PropertiesLoader.getSeleniumGridNodeTwoURL;
-
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
@@ -33,10 +30,10 @@ public class RunnerTest {
 
     private TestNGCucumberRunner testRunner;
 
-    @Parameters({"browserType", "platform"})
+    @Parameters({"browserType", "platform", "node"})
     @BeforeClass
-    public void setUP(String browserType, String platform) throws Exception {
-        getSeleniumGridCapabilities(browserType, platform);
+    public void setUP(String browserType, String platform, String node) throws Exception {
+        getSeleniumGridCapabilities(browserType, platform, node);
 
 
         testRunner = new TestNGCucumberRunner(RunnerTest.class);
@@ -59,7 +56,7 @@ public class RunnerTest {
         getDriver().quit();
     }
 
-    private static void getSeleniumGridCapabilities(String browserType, String platform) throws Exception {
+    private static void getSeleniumGridCapabilities(String browserType, String platform, String node) throws Exception {
         RemoteWebDriver driver = null;
         DesiredCapabilities capability = null;
 
@@ -68,13 +65,13 @@ public class RunnerTest {
             capability.setBrowserName("chrome");
             capability.setPlatform(Platform.extractFromSysProperty(platform));
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeOneURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(node + "/wd/hub"), capability);
 
         } else if (browserType.equals("firefox")) {
             capability = DesiredCapabilities.firefox();
             capability.setBrowserName("firefox");
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeTwoURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(node + "/wd/hub"), capability);
         }
 
         if (platform.equals("WINDOWS")) {
