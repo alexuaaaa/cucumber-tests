@@ -70,13 +70,13 @@ public class RunnerTest {
             capability.setBrowserName("chrome");
             capability.setPlatform(Platform.extractFromSysProperty(platform));
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridHubURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeOneURL() + "/wd/hub"), capability);
 
         } else if (browserType.equals("firefox")) {
             capability = DesiredCapabilities.firefox();
             capability.setBrowserName("firefox");
 
-            driver = new RemoteWebDriver(new URL(getSeleniumGridHubURL() + "/wd/hub"), capability);
+            driver = new RemoteWebDriver(new URL(getSeleniumGridNodeTwoURL() + "/wd/hub"), capability);
         }
 
         if (platform.equals("WINDOWS")) {
