@@ -14,7 +14,7 @@ import java.net.URL;
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
-        tags = {"@Login_Test3"},/*tags means that specific feature is tested, or scenario*/
+//        tags = {"@Login_Test3"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         /*monochrome = true displays the output in a readable format*/
         format = // generate format report
@@ -74,7 +74,7 @@ public class RunnerTest {
             driver = new RemoteWebDriver(new URL(node + "/wd/hub"), capability);
         }
 
-        if (platform.equals("WINDOWS")) {
+        if (platform.equals("windows")) {
             capability.setPlatform(org.openqa.selenium.Platform.WINDOWS);
         } else if (platform.equals("XP")) {
             capability.setPlatform(org.openqa.selenium.Platform.XP);

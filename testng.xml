@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="2">
     <test name="Test with Firefox on Windows">
         <parameter name="browserType" value="firefox"/>
-        <parameter name="platform" value="WINDOWS"/>
+        <parameter name="platform" value="windows"/>
         <parameter name="node" value="http://192.168.167.21:5599"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>
@@ -11,7 +11,7 @@
     </test> <!-- Test -->
     <test name="Test with Chrome on Windows">
         <parameter name="browserType" value="chrome"/>
-        <parameter name="platform" value="WINDOWS"/>
+        <parameter name="platform" value="windows"/>
         <parameter name="node" value="http://192.168.167.21:5599"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>
@@ -19,14 +19,15 @@
     </test> <!-- Test -->
     <!--<test name="Test with Firefox on Linux">-->
         <!--<parameter name="browserType" value="firefox"/>-->
-        <!--<parameter name="platform" value="LINUX"/>-->
+        <!--<parameter name="platform" value="Linux"/>-->
         <!--<classes>-->
             <!--<class name="cucumber.runner.RunnerTest"/>-->
         <!--</classes>-->
     <!--</test> &lt;!&ndash; Test &ndash;&gt;-->
     <!--<test name="Test with Chrome on Windows">-->
         <!--<parameter name="browserType" value="chrome"/>-->
-        <!--<parameter name="platform" value="LINUX"/>-->
+        <!--<parameter name="platform" value="Linux"/>-->
+        <!--<parameter name="node" value="10.0.2.15:7777"/>-->
         <!--<classes>-->
             <!--<class name="cucumber.runner.RunnerTest"/>-->
         <!--</classes>-->

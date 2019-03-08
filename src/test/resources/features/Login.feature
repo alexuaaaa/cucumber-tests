@@ -32,7 +32,7 @@ Feature: Login form of the application
   Negative test
     Given The URL application is accessed with success
     When User is send the "Username" invalid value "<username>" and "Password" with invalid "<password>" credentials
-#    And  User is send one "Inpatient Ward"
+    And  User is send one "Inpatient Ward"
     And "Login" button is pressed without verifying home page
     Then "LoginInvalidMessage" with invalid user/pass is returned
     Examples:
