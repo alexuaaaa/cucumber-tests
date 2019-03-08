@@ -24,6 +24,7 @@ import java.net.URL;
                         "rerun:target/cucumber-reports/re-run.txt",
                         "junit:target/cucumber-reports/Cucumber.xml"}
 )
+
 public class RunnerTest {
 
     private static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<>();
@@ -31,12 +32,11 @@ public class RunnerTest {
     private TestNGCucumberRunner testRunner;
 
     @Parameters({"browserType", "platform", "node"})
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUP(String browserType, String platform, String node) throws Exception {
         getSeleniumGridCapabilities(browserType, platform, node);
 
-
-        testRunner = new TestNGCucumberRunner(RunnerTest.class);
+        testRunner = new TestNGCucumberRunner(this.getClass());
     }
 
     @Test(dataProvider = "features")
