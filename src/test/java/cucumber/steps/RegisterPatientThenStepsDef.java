@@ -40,7 +40,9 @@ public class RegisterPatientThenStepsDef implements En {
             getElementType(getLocator(getCurrentPage(), GENDER_BUTTON)).click();
         });
 
-        And("^The gender is provided$", (List<PatientDetails> patientDetailsList) -> {
+        And("^The gender is provided$", (DataTable table) -> {
+            List<PatientDetails> patientDetailsList =  table.asList(PatientDetails.class);
+
             for (PatientDetails patientDetails : patientDetailsList) {
                 getElementType(patientDetails.path).click();
             }
