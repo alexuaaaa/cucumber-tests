@@ -1,7 +1,6 @@
 package cucumber.steps;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
+import cucumber.api.java8.En;
 
 import static cucumber.Asserter.asserterDisplayedHomeButtons;
 import static cucumber.Asserter.asserterPages;
@@ -10,39 +9,37 @@ import static cucumber.Constants.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class LoginThenStepsDef {
+public class LoginThenStepsDef implements En {
 
-    @Then("^\"(.*)\" button is pressed$")
-    public static void userIsLoggedInWithSuccess(String logIn) {
-        getElementType(getLocator(getCurrentPage(), logIn)).click();
+    public LoginThenStepsDef() {
 
-        asserterPages(HOME_PAGE);
-        asserterDisplayedHomeButtons();
-    }
+        Then("^\"(.*)\" button is pressed$", (String logIn) -> {
+            getElementType(getLocator(getCurrentPage(), logIn)).click();
 
-    @And("^\"(.*)\" button is pressed without verifying home page$")
-    public static void logButtonIsPressedWithoutVerifyingHomePage(String logIn) {
-        getElementType(getLocator(getCurrentPage(), logIn)).click();
+            asserterPages(HOME_PAGE);
+            asserterDisplayedHomeButtons();
+        });
 
-        asserterPages(LOGIN_PAGE);
-    }
+        And("^\"(.*)\" button is pressed without verifying home page$", (String logIn) -> {
+            getElementType(getLocator(getCurrentPage(), logIn)).click();
 
-    @And("^\"(.*)\" with logged In appears having \"(.*)\"$")
-    public static void messageWithLoggedInAppears(String message, String locationOutput) {
-        String expectedMessage = getElementType(getLocator(getCurrentPage(), message)).getText();
+            asserterPages(LOGIN_PAGE);
+        });
 
-        assertTrue(expectedMessage.contains("Logged in as Super User () at " + locationOutput + "."), "The message from loggedIn is not equal");
-    }
+        And("^\"(.*)\" with logged In appears having \"(.*)\"$", (String message, String locationOutput) -> {
+            String expectedMessage = getElementType(getLocator(getCurrentPage(), message)).getText();
 
-    @And("^Logout button will be clicked$")
-    public static void logoutButtonWillBeClicked() {
-        getElementType(LOGOUT_BUTTON).click();
-    }
+            assertTrue(expectedMessage.contains("Logged in as Super User () at " + locationOutput + "."), "The message from loggedIn is not equal");
+        });
 
-    @Then("^\"(.*)\" with invalid user/pass is returned$")
-    public static void messageWithInvalidCredentialsIsReturned(String errorMessageLogin) {
-        String expectedMessage = getElementType(getLocator(getCurrentPage(), errorMessageLogin)).getText();
+        And("^Logout button will be clicked$", () -> {
+            getElementType(LOGOUT_BUTTON).click();
+        });
 
-        assertEquals(INVALID_MESSAGE_CREDENTIALS, expectedMessage, "Message is not equal in invalid is logged");
+        Then("^\"(.*)\" with invalid user/pass is returned$", (String errorMessageLogin) -> {
+            String expectedMessage = getElementType(getLocator(getCurrentPage(), errorMessageLogin)).getText();
+
+            assertEquals(INVALID_MESSAGE_CREDENTIALS, expectedMessage, "Message is not equal in invalid is logged");
+        });
     }
 }
