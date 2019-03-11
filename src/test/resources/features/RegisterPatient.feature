@@ -22,6 +22,7 @@ Feature: Register a patient
     And User will send the patient related to
       | LastName | FirstName |
       | Albu     | Alexandru |
+
     And User will press confirm
     And Page With User Information will appear
     And The page contains the following data
@@ -34,7 +35,7 @@ Feature: Register a patient
       | LATEST_OBSERVATIONS  | LatestObs       |
       | HEALTH_TREND_SUMMARY | HealthTrend     |
       | WEIGHT_GRAPH         | WeightGraph     |
-      | APPOINTMENTS         | Appointment     |
+#      | APPOINTMENTS         | Appointment     |
       | FAMILY               | Family          |
       | CONDITIONS           | Conditions      |
       | ALLERGIES            | Allergies       |

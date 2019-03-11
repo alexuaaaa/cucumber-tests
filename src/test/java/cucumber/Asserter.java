@@ -15,10 +15,9 @@ public class Asserter {
     public static void asserterDisplayedHomeButtons() {
         assertThat(getElementType(getLocator(getCurrentPage(), "FindPatientRecord")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "ActiveVisits")).isDisplayed());
-        assertThat(getElementType(getLocator(getCurrentPage(), "AppointmentScheduling")).isDisplayed());
+        // assertThat(getElementType(getLocator(getCurrentPage(), "AppointmentScheduling")).isDisplayed()).withFailMessage("Button not present in HomePage");
         assertThat(getElementType(getLocator(getCurrentPage(), "Reports")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "DataManagement")).isDisplayed());
-        assertThat(getElementType(getLocator(getCurrentPage(), "ConfigureMetadata")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "SystemAdministration")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "RegisterPatient")).isDisplayed());
     }
@@ -32,5 +31,7 @@ public class Asserter {
         assertThat(element.isDisplayed());
     }
 
-
+    public static void asserterGetButtonDisplayed(String element) {
+        assertThat(getElementType(getLocator(getCurrentPage(), element)).isDisplayed()).isTrue().withFailMessage("button appear");
+    }
 }

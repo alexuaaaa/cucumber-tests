@@ -16,6 +16,7 @@ public class LoginGivenStepsDef implements En {
         Given("^The URL application is accessed with success$", () -> {
             getDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             getDriver().get(getURLApplication());
+            getDriver().manage().deleteAllCookies();
             getDriver().manage().window().maximize();
 
             asserterPages(LOGIN_PAGE);

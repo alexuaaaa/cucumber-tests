@@ -16,7 +16,6 @@ public class HomePageObjs {
         homeMap.put("AppointmentScheduling", "appointmentschedulingui-homeAppLink-appointmentschedulingui-homeAppLink-extension");
         homeMap.put("Reports", "reportingui-reports-homepagelink-reportingui-reports-homepagelink-extension");
         homeMap.put("DataManagement", "coreapps-datamanagement-homepageLink-coreapps-datamanagement-homepageLink-extension");
-        homeMap.put("ConfigureMetadata", "org-openmrs-module-adminui-configuremetadata-homepageLink-org-openmrs-module-adminui-configuremetadata-homepageLink-extension");
         homeMap.put("SystemAdministration", "coreapps-systemadministration-homepageLink-coreapps-systemadministration-homepageLink-extension");
         homeMap.put("RegisterPatient","referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension");
     }

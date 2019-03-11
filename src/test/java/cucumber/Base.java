@@ -13,7 +13,6 @@ public class Base extends RunnerTest {
     public static String getLocator(String className, String elementName) {
         Class<?> cls = null;
         String locator = "";
-
         try {
             cls = Class.forName("cucumber.pageobjs." + className + "Objs");
             Method findLocator = cls.getMethod("findLocator", String.class);
@@ -21,7 +20,6 @@ public class Base extends RunnerTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return locator;
     }
 
@@ -62,7 +60,6 @@ public class Base extends RunnerTest {
         } else {
             page = "Not found";
         }
-
         return page;
     }
 
@@ -79,7 +76,18 @@ public class Base extends RunnerTest {
         } else if (element.contains("@")) {
             by = By.xpath(element);
         }
-
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
+    public static void sendElementActionClickToBrowser(String element) {
+        getElementType(getLocator(getCurrentPage(), element)).click();
+    }
+
+    public static void getElementTypeByLocator(String elementType) {
+        getElementType(elementType).click();
+    }
+
+    public static void sendElementValueActionToBrowser(String elementUser, String elementUserValue) {
+        getElementType(getLocator(getCurrentPage(), elementUser)).sendKeys(elementUserValue);
     }
 }

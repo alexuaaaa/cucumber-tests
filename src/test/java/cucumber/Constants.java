@@ -2,10 +2,8 @@ package cucumber;
 
 public class Constants {
 
-    public static final String APPLICATION_URL = "https://demo.openmrs.org/openmrs/login.htm";
     public static final String USER_NAME_VALUE = "admin";
     public static final String PASSWORD_VALUE = "Admin123";
-    public static final String FIND_PATIENT_BUTTON = "FindPatientRecord";
     public static final String LOGOUT_BUTTON = "/html/body/header/ul/li[3]/a";
     public static final String INVALID_MESSAGE_CREDENTIALS = "Invalid username/password. Please try again.";
     public static final String GENDER_BUTTON = "GenderButton";

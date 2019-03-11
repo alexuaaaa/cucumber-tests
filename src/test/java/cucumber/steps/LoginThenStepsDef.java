@@ -14,14 +14,14 @@ public class LoginThenStepsDef implements En {
     public LoginThenStepsDef() {
 
         Then("^\"(.*)\" button is pressed$", (String logIn) -> {
-            getElementType(getLocator(getCurrentPage(), logIn)).click();
+            sendElementActionClickToBrowser(logIn);
 
             asserterPages(HOME_PAGE);
             asserterDisplayedHomeButtons();
         });
 
         And("^\"(.*)\" button is pressed without verifying home page$", (String logIn) -> {
-            getElementType(getLocator(getCurrentPage(), logIn)).click();
+            sendElementActionClickToBrowser(logIn);
 
             asserterPages(LOGIN_PAGE);
         });
@@ -33,7 +33,7 @@ public class LoginThenStepsDef implements En {
         });
 
         And("^Logout button will be clicked$", () -> {
-            getElementType(LOGOUT_BUTTON).click();
+            getElementTypeByLocator(LOGOUT_BUTTON);
         });
 
         Then("^\"(.*)\" with invalid user/pass is returned$", (String errorMessageLogin) -> {
