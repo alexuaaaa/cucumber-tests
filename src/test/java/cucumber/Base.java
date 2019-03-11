@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 public class Base extends RunnerTest {
 
@@ -79,15 +80,21 @@ public class Base extends RunnerTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
-    public static void sendElementActionClickToBrowser(String element) {
-        getElementType(getLocator(getCurrentPage(), element)).click();
+    public static void sendElementActionClickToBrowser(String... element) {
+        for (int i = 0; i < element.length; i++) {
+            getElementType(getLocator(getCurrentPage(), element[i])).click();
+        }
     }
 
-    public static void getElementTypeByLocator(String elementType) {
-        getElementType(elementType).click();
+    public static void getElementTypeByLocator(String... elementType) {
+        for (int i = 0; i < elementType.length; i++) {
+            getElementType(elementType[i]).click();
+        }
     }
 
-    public static void sendElementValueActionToBrowser(String elementUser, String elementUserValue) {
-        getElementType(getLocator(getCurrentPage(), elementUser)).sendKeys(elementUserValue);
+    public static void sendElementValueActionToBrowser(Map<String, String> map) {
+        map.forEach((key,value) -> {
+            getElementType(getLocator(getCurrentPage(), key)).sendKeys(value);
+        });
     }
 }

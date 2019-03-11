@@ -4,6 +4,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java8.En;
 import cucumber.classobjs.PatientDetails;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -26,12 +27,14 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The PatientDetails with \"(.*)\" and \"(.*)\" and \"(.*)\" are set$", (String givenName, String middleName, String familyName, DataTable table) -> {
-            List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+            final List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+            final Map<String, String> map = new HashMap<>();
 
             patientDetails.forEach(detailsPatient -> {
-                        sendElementValueActionToBrowser(givenName, detailsPatient.given);
-                        sendElementValueActionToBrowser(middleName, detailsPatient.middle);
-                        sendElementValueActionToBrowser(familyName, detailsPatient.familyName);
+                        map.put(givenName, detailsPatient.given);
+                        map.put(middleName, detailsPatient.middle);
+                        map.put(familyName, detailsPatient.familyName);
+                        sendElementValueActionToBrowser(map);
                     }
             );
 
@@ -43,7 +46,7 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The gender is provided$", (DataTable table) -> {
-            List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
             patientDetailsList.forEach(patientDetails -> {
                 getElementTypeByLocator(patientDetails.path);
@@ -54,38 +57,47 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The birthday is set$", (DataTable table) -> {
-            List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final Map<String, String> map = new HashMap<>();
 
             patientDetailsList.forEach(patientDetails -> {
-                sendElementValueActionToBrowser(DAY_ID, patientDetails.day);
-                sendElementValueActionToBrowser(YEAR_ID, patientDetails.year);
+                map.put(DAY_ID, patientDetails.day);
+                map.put(YEAR_ID, patientDetails.year);
+                sendElementValueActionToBrowser(map);
             });
 
             assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
-            sendElementActionClickToBrowser(MONTH_ID);
-            sendElementActionClickToBrowser(JANUARY_PATH);
-            sendElementActionClickToBrowser(ADDRESS_PATH);
+            sendElementActionClickToBrowser(MONTH_ID, JANUARY_PATH, ADDRESS_PATH);
         });
 
         And("^User will send the address \"(.*)\"$", (String address) -> {
-            sendElementValueActionToBrowser(ADDRESS_PATIENT_ID, address);
+            final Map<String, String> map = new HashMap<>();
+
+            map.put(ADDRESS_PATIENT_ID, address);
+
+            sendElementValueActionToBrowser(map);
             sendElementActionClickToBrowser(PHONE_PATH);
         });
 
         And("^User will provide the telephone \"(.*)\"$", (Integer telephone) -> {
-            sendElementValueActionToBrowser(PHONE_NUMBER, String.valueOf(telephone));
+            final Map<String, String> map = new HashMap<>();
+
+            map.put(PHONE_NUMBER, String.valueOf(telephone));
+
+            sendElementValueActionToBrowser(map);
             sendElementActionClickToBrowser(RELATIVE_PATH);
         });
 
         And("^User will send the patient related to$", (DataTable table) -> {
-            List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final Map<String, String> map = new HashMap<>();
 
-            sendElementActionClickToBrowser(PATIENT_TYPE_ID);
-            sendElementActionClickToBrowser(PATIENT_DOCTOR);
+            sendElementActionClickToBrowser(PATIENT_TYPE_ID, PATIENT_DOCTOR);
 
             patientDetailsList.forEach(name -> {
-                sendElementValueActionToBrowser(PERSONAL_NAME_PATH, name.lastName);
-                sendElementValueActionToBrowser(PERSONAL_NAME_PATH, name.firstName);
+                map.put(PERSONAL_NAME_PATH, name.lastName);
+                map.put(PERSONAL_NAME_PATH, name.firstName);
+                sendElementValueActionToBrowser(map);
             });
             sendElementActionClickToBrowser(CONFIRM_BUTTON_XPATH);
         });
@@ -101,12 +113,12 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The page contains the following data$", (DataTable data) -> {
-            List<Map<String, String>> content = data.asMaps(String.class, String.class);
+            final List<Map<String, String>> content = data.asMaps(String.class, String.class);
+
             final String url = getDriver().getPageSource();
 
             for (Map<String, String> row : content) {
                 String locator = getLocator(getCurrentPage(), row.get("Value"));
-
                 assertThat(url.contains(locator)).isTrue();
             }
         });
