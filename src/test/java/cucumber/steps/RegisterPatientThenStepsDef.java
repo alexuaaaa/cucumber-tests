@@ -27,26 +27,27 @@ public class RegisterPatientThenStepsDef implements En {
 
         And("^The PatientDetails with \"(.*)\" and \"(.*)\" and \"(.*)\" are set$", (String givenName, String middleName, String familyName, DataTable table) -> {
             List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
-            for (PatientDetails detailsPatient : patientDetails) {
-                sendElementValueActionToBrowser(givenName, detailsPatient.given);
-                sendElementValueActionToBrowser(middleName, detailsPatient.middle);
-                sendElementValueActionToBrowser(familyName, detailsPatient.familyName);
-            }
+
+            patientDetails.forEach(detailsPatient -> {
+                        sendElementValueActionToBrowser(givenName, detailsPatient.given);
+                        sendElementValueActionToBrowser(middleName, detailsPatient.middle);
+                        sendElementValueActionToBrowser(familyName, detailsPatient.familyName);
+                    }
+            );
 
             asserterGetButtonDisplayed(givenName);
             asserterGetButtonDisplayed(middleName);
             asserterGetButtonDisplayed(familyName);
             asserterGetButtonDisplayed(GENDER_BUTTON);
-
             sendElementActionClickToBrowser(GENDER_BUTTON);
         });
 
         And("^The gender is provided$", (DataTable table) -> {
             List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
-            for (PatientDetails patientDetails : patientDetailsList) {
+            patientDetailsList.forEach(patientDetails -> {
                 getElementTypeByLocator(patientDetails.path);
-            }
+            });
 
             assertTrue(getElementType(getLocator(getCurrentPage(), BIRTHDAY_ID)).isDisplayed());
             sendElementActionClickToBrowser(BIRTHDAY_ID);
@@ -54,13 +55,13 @@ public class RegisterPatientThenStepsDef implements En {
 
         And("^The birthday is set$", (DataTable table) -> {
             List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
-            for (PatientDetails patientDetails : patientDetailsList) {
+
+            patientDetailsList.forEach(patientDetails -> {
                 sendElementValueActionToBrowser(DAY_ID, patientDetails.day);
                 sendElementValueActionToBrowser(YEAR_ID, patientDetails.year);
-            }
+            });
 
             assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
-
             sendElementActionClickToBrowser(MONTH_ID);
             sendElementActionClickToBrowser(JANUARY_PATH);
             sendElementActionClickToBrowser(ADDRESS_PATH);
