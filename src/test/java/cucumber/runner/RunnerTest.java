@@ -2,6 +2,7 @@ package cucumber.runner;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -13,41 +14,40 @@ import java.net.URL;
 
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
-        glue = {"cucumber.steps"},/*means the package where step definitions are set*/
+        glue = {"cucumber.steps", "cucumber.config"},/*means the package where step definitions are set*/
 //        tags = {"@Login_Test3"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         monochrome = true,/*true displays the output in a readable format*/
-        plugin = {"html:target/site/cucumber-pretty","json:target/cucumber.json"},
-        tags = {"~@ignore"}
+        plugin = {"html:target/site/cucumber-pretty","json:target/cucumber.json"}
 )
 
 public class RunnerTest {
 
     private static ThreadLocal<RemoteWebDriver> dr = new ThreadLocal<>();
 
-    private TestNGCucumberRunner testRunner;
+    private TestNGCucumberRunner testNGCucumberRunner;
 
     @Parameters({"browserType", "platform", "node"})
     @BeforeClass(alwaysRun = true)
     public void setUP(String browserType, String platform, String node) throws Exception {
         getSeleniumGridCapabilities(browserType, platform, node);
 
-        testRunner = new TestNGCucumberRunner(this.getClass());
+        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
-    @Test(dataProvider = "features")
-    public void runFeatures(CucumberFeatureWrapper cFeature) {
-        testRunner.runCucumber(cFeature.getCucumberFeature());
+    @Test(dataProvider = "scenarios")
+    public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {
+        testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());
     }
 
-    @DataProvider(name = "features")
-    public Object[][] getFeatures() {
-        return testRunner.provideFeatures();
+    @DataProvider
+    public Object[][] scenarios() {
+        return testNGCucumberRunner.provideScenarios();
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() {
-        testRunner.finish();
+        testNGCucumberRunner.finish();
         sleep();
         getDriver().quit();
     }

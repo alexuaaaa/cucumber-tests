@@ -12,7 +12,8 @@ public class PatientDetails {
     public String lastName;
     public String firstName;
 
-    public void PatientDetails(String given, String middle, String familyName, String gender, String day, String year, String path, String firstName, String lastName) {
+
+    public PatientDetails(String given, String middle, String familyName, String gender, String day, String year, String path, String firstName, String lastName) {
         this.given = given;
         this.middle = middle;
         this.familyName = familyName;

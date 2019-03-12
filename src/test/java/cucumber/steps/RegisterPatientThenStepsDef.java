@@ -1,8 +1,9 @@
 package cucumber.steps;
 
-import cucumber.api.DataTable;
+import cucumber.api.java.AfterStep;
 import cucumber.api.java8.En;
 import cucumber.classobjs.PatientDetails;
+import io.cucumber.datatable.DataTable;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,6 +18,10 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef implements En {
+
+    @AfterStep
+    public static void after() {
+    }
 
     public RegisterPatientThenStepsDef() {
 
@@ -47,6 +52,7 @@ public class RegisterPatientThenStepsDef implements En {
 
         And("^The gender is provided$", (DataTable table) -> {
             final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            final Map<String, String> map = new HashMap<>();
 
             patientDetailsList.forEach(patientDetails -> {
                 getElementTypeByLocator(patientDetails.path);
@@ -72,7 +78,6 @@ public class RegisterPatientThenStepsDef implements En {
 
         And("^User will send the address \"(.*)\"$", (String address) -> {
             final Map<String, String> map = new HashMap<>();
-
             map.put(ADDRESS_PATIENT_ID, address);
 
             sendElementValueActionToBrowser(map);
@@ -81,7 +86,6 @@ public class RegisterPatientThenStepsDef implements En {
 
         And("^User will provide the telephone \"(.*)\"$", (Integer telephone) -> {
             final Map<String, String> map = new HashMap<>();
-
             map.put(PHONE_NUMBER, String.valueOf(telephone));
 
             sendElementValueActionToBrowser(map);
@@ -89,8 +93,8 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^User will send the patient related to$", (DataTable table) -> {
-            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
             final Map<String, String> map = new HashMap<>();
+            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
 
             sendElementActionClickToBrowser(PATIENT_TYPE_ID, PATIENT_DOCTOR);
 
