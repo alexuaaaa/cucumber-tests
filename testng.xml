@@ -4,7 +4,7 @@
     <test name="Test with Firefox on Windows">
         <parameter name="browserType" value="firefox"/>
         <parameter name="platform" value="windows"/>
-        <parameter name="node" value="http://192.168.100.14:5599"/>
+        <parameter name="node" value="http://192.168.167.21:5599"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>
         </classes>
@@ -12,7 +12,7 @@
     <test name="Test with Chrome on Windows">
         <parameter name="browserType" value="chrome"/>
         <parameter name="platform" value="windows"/>
-        <parameter name="node" value="http://192.168.100.14:5599"/>
+        <parameter name="node" value="http://192.168.167.21:5599"/>
         <classes>
             <class name="cucumber.runner.RunnerTest"/>
         </classes>

@@ -16,13 +16,9 @@ import java.net.URL;
         glue = {"cucumber.steps"},/*means the package where step definitions are set*/
 //        tags = {"@Login_Test3"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
-        /*monochrome = true displays the output in a readable format*/
-        format = // generate format report
-                {"pretty",// in the console to generate steps in a readable format
-                        "html:target/cucumber-reports/cucumber-pretty",
-                        "json:target/cucumber-reports/CucumberTestReport.json",
-                        "rerun:target/cucumber-reports/re-run.txt",
-                        "junit:target/cucumber-reports/Cucumber.xml"}
+        monochrome = true,/*true displays the output in a readable format*/
+        plugin = {"html:target/site/cucumber-pretty","json:target/cucumber.json"},
+        tags = {"~@ignore"}
 )
 
 public class RunnerTest {

@@ -59,6 +59,11 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${jackson-mapper-asl.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.mkolisnyk</groupId>
+            <artifactId>cucumber-reports</artifactId>
+            <version>0.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -78,15 +83,39 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire-plugin.version}</version>
                     <configuration>
-                        <forkCount>0</forkCount>
+                        <testFailureIgnore>true</testFailureIgnore>
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
                         <useSystemClassLoader>false</useSystemClassLoader>
+                        <testFailureIgnore>true</testFailureIgnore>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>net.masterthought</groupId>
+                    <artifactId>maven-cucumber-reporting</artifactId>
+                    <version>3.13.0</version>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <projectName>CucumberReport</projectName>
+                                <outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
+                                <jsonFiles>
+                                    <param>${project.build.directory}/cucumber.json</param>
+                                </jsonFiles>
+                                 <parallelTesting>true</parallelTesting>
+                                <buildNumber>1</buildNumber>
+                                <checkBuildResult>true</checkBuildResult>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
 </project>
