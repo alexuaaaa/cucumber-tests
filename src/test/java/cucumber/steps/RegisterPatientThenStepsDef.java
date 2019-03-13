@@ -6,9 +6,11 @@ import cucumber.classobjs.PatientDetails;
 import cucumber.classobjs.PatientGender;
 import io.cucumber.datatable.DataTable;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import static cucumber.Asserter.asserterGetButtonDisplayed;
 import static cucumber.Asserter.asserterPages;
@@ -20,11 +22,11 @@ import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef implements En {
 
-    private static Map<String, String> map = new HashMap<>();
+    private static ConcurrentHashMap<String, String> mapFromDataTables = new ConcurrentHashMap<>();
 
-    @AfterStep
-    public static void after() {
-        map.clear();
+    @AfterStep("@RegisterPatient_Test1")
+    public void after() {
+        mapFromDataTables.clear();
     }
 
     public RegisterPatientThenStepsDef() {
@@ -36,13 +38,15 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The PatientDetails with \"(.*)\" and \"(.*)\" and \"(.*)\" are set$", (String givenName, String middleName, String familyName, DataTable table) -> {
+            CopyOnWriteArrayList<PatientDetails> list1 = new CopyOnWriteArrayList<>();
             final List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+            list1.addAllAbsent(patientDetails);
 
-            patientDetails.forEach(detailsPatient -> {
-                        map.put(givenName, detailsPatient.given);
-                        map.put(middleName, detailsPatient.middle);
-                        map.put(familyName, detailsPatient.familyName);
-                        sendElementValueActionToBrowser(map);
+            list1.forEach(detailsPatient -> {
+                        mapFromDataTables.put(givenName, detailsPatient.given);
+                        mapFromDataTables.put(middleName, detailsPatient.middle);
+                        mapFromDataTables.put(familyName, detailsPatient.familyName);
+                        sendElementValueActionToBrowser(mapFromDataTables);
                     }
             );
 
@@ -54,9 +58,11 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The gender is provided$", (DataTable table) -> {
-            final List<PatientGender> patientDetailsList = table.asList(PatientGender.class);
+            CopyOnWriteArrayList<PatientGender> list1 = new CopyOnWriteArrayList<>();
+            final List<PatientGender> patientDetails = table.asList(PatientGender.class);
+            list1.addAllAbsent(patientDetails);
 
-            patientDetailsList.forEach(patientGender -> {
+            list1.forEach(patientGender -> {
                 getElementTypeByLocator(patientGender.path);
             });
 
@@ -65,12 +71,14 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^The birthday is set$", (DataTable table) -> {
-            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            CopyOnWriteArrayList<PatientDetails> list1 = new CopyOnWriteArrayList<>();
+            final List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+            list1.addAllAbsent(patientDetails);
 
-            patientDetailsList.forEach(patientDetails -> {
-                map.put(DAY_ID, patientDetails.day);
-                map.put(YEAR_ID, patientDetails.year);
-                sendElementValueActionToBrowser(map);
+            list1.forEach(patient -> {
+                mapFromDataTables.put(DAY_ID, patient.day);
+                mapFromDataTables.put(YEAR_ID, patient.year);
+                sendElementValueActionToBrowser(mapFromDataTables);
             });
 
             assertTrue(getElementType(getLocator(getCurrentPage(), YEAR_ID)).isDisplayed());
@@ -78,28 +86,30 @@ public class RegisterPatientThenStepsDef implements En {
         });
 
         And("^User will send the address \"(.*)\"$", (String address) -> {
-            map.put(ADDRESS_PATIENT_ID, address);
+            mapFromDataTables.put(ADDRESS_PATIENT_ID, address);
 
-            sendElementValueActionToBrowser(map);
+            sendElementValueActionToBrowser(mapFromDataTables);
             sendElementActionClickToBrowser(PHONE_PATH);
         });
 
         And("^User will provide the telephone \"(.*)\"$", (String telephone) -> {
-            map.put(PHONE_NUMBER, telephone);
+            mapFromDataTables.put(PHONE_NUMBER, telephone);
 
-            sendElementValueActionToBrowser(map);
+            sendElementValueActionToBrowser(mapFromDataTables);
             sendElementActionClickToBrowser(RELATIVE_PATH);
         });
 
         And("^User will send the patient related to$", (DataTable table) -> {
-            final List<PatientDetails> patientDetailsList = table.asList(PatientDetails.class);
+            CopyOnWriteArrayList<PatientDetails> list1 = new CopyOnWriteArrayList<>();
+            final List<PatientDetails> patientDetails = table.asList(PatientDetails.class);
+            list1.addAllAbsent(patientDetails);
 
             sendElementActionClickToBrowser(PATIENT_TYPE_ID, PATIENT_DOCTOR);
 
-            patientDetailsList.forEach(name -> {
-                  map.put(PERSONAL_NAME_PATH, name.lastName);
-                  map.put(PERSONAL_NAME_PATH, name.firstName);
-                sendElementValueActionToBrowser(map);
+            list1.forEach(name -> {
+                mapFromDataTables.put(PERSONAL_NAME_PATH, name.lastName);
+                mapFromDataTables.put(PERSONAL_NAME_PATH, name.firstName);
+                sendElementValueActionToBrowser(mapFromDataTables);
             });
             sendElementActionClickToBrowser(CONFIRM_BUTTON_XPATH);
         });

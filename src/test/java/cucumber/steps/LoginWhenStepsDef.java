@@ -5,6 +5,7 @@ import cucumber.api.java8.En;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static cucumber.Base.getElementTypeByLocator;
 import static cucumber.Base.sendElementValueActionToBrowser;
@@ -18,7 +19,7 @@ public class LoginWhenStepsDef implements En {
 
 
         When("^User is send the valid \"(.*)\" and \"(.*)\"$", (String elementUser, String elementPassword) -> {
-            final Map<String, String> map = new HashMap<>();
+            final ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
 
             map.put(elementUser, USER_NAME_VALUE);
             map.put(elementPassword, PASSWORD_VALUE);
@@ -31,7 +32,7 @@ public class LoginWhenStepsDef implements En {
         });
 
         When("^User is send the \"(.*)\" invalid value \"(.*)\" and \"(.*)\" with invalid \"(.*)\" credentials$", (String elementUser, String username, String elementPassword, String password) -> {
-            final Map<String, String> map = new HashMap<>();
+            final ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
 
             map.put(elementUser, username);
             map.put(elementPassword, password);
