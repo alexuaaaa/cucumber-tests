@@ -31,7 +31,9 @@ public class Asserter {
         assertThat(element.isDisplayed());
     }
 
-    public static void asserterGetButtonDisplayed(String element) {
-        assertThat(getElementType(getLocator(getCurrentPage(), element)).isDisplayed()).isTrue().withFailMessage("button appear");
+    public static void asserterGetButtonDisplayed(String... element) {
+        for (int i = 0; i < element.length; i++) {
+            assertThat(getElementType(getLocator(getCurrentPage(), element[i])).isDisplayed()).isTrue().withFailMessage("button appear");
+        }
     }
 }

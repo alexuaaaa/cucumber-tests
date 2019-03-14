@@ -15,7 +15,7 @@ import java.net.URL;
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps", "cucumber.config"},/*means the package where step definitions are set*/
-//        tags = {"@RegisterPatient_Test1"},/*tags means that specific feature is tested, or scenario*/
+        tags = {"@RegisterPatient_Test1"},/*tags means that specific feature is tested, or scenario*/
         /*dryRun = true to check if mapping is valid between feature file and step definition*/
         monochrome = true,/*true displays the output in a readable format*/
         plugin = {"html:target/site/cucumber-pretty","json:target/cucumber.json"}

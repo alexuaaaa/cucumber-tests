@@ -1,10 +1,7 @@
 package cucumber.steps;
 
-import cucumber.api.java.After;
 import cucumber.api.java8.En;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static cucumber.Base.getElementTypeByLocator;
@@ -15,7 +12,6 @@ import static cucumber.Constants.USER_NAME_VALUE;
 public class LoginWhenStepsDef implements En {
 
     public LoginWhenStepsDef() {
-
 
 
         When("^User is send the valid \"(.*)\" and \"(.*)\"$", (String elementUser, String elementPassword) -> {

@@ -49,10 +49,7 @@ public class RegisterPatientThenStepsDef implements En {
                     }
             );
 
-            asserterGetButtonDisplayed(givenName);
-            asserterGetButtonDisplayed(middleName);
-            asserterGetButtonDisplayed(familyName);
-            asserterGetButtonDisplayed(GENDER_BUTTON);
+            asserterGetButtonDisplayed(givenName, middleName, familyName, GENDER_BUTTON);
             sendElementActionClickToBrowser(GENDER_BUTTON);
         });
 
