@@ -6,7 +6,6 @@ import cucumber.classobjs.PatientDetails;
 import cucumber.classobjs.PatientGender;
 import io.cucumber.datatable.DataTable;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,11 +21,11 @@ import static org.testng.Assert.assertTrue;
 
 public class RegisterPatientThenStepsDef implements En {
 
-    private static ConcurrentHashMap<String, String> mapFromDataTables = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, String> mapFromDataTables;
 
     @AfterStep("@RegisterPatient_Test1")
     public void after() {
-        mapFromDataTables.clear();
+        mapFromDataTables = new ConcurrentHashMap<>();
     }
 
     public RegisterPatientThenStepsDef() {

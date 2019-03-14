@@ -12,8 +12,8 @@ Feature: Login form of the application
     And Logout button will be clicked
     Examples:
       | location          |
-      | Isolation Ward    |
-      | Laboratory        |
+      | Inpatient Ward    |
+#      | Laboratory        |
       | Outpatient Clinic |
       | Pharmacy          |
       | Registration Desk |
