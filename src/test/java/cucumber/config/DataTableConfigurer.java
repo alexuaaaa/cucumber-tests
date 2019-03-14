@@ -9,7 +9,6 @@ import io.cucumber.datatable.DataTableType;
 import java.util.Locale;
 import java.util.Map;
 
-
 public class DataTableConfigurer implements TypeRegistryConfigurer {
 
     @Override
@@ -33,7 +32,6 @@ public class DataTableConfigurer implements TypeRegistryConfigurer {
                         }
                 )
         );
-
         typeRegistry.defineDataTableType(
                 new DataTableType(PatientGender.class,
                         (Map<String, String> row) -> {

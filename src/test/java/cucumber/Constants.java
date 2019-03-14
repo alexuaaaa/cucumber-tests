@@ -22,7 +22,7 @@ public class Constants {
     public static final String PATIENT_DOCTOR = "patient_doctor";
     public static final String SUBMIT_BUTTON_ID = "submit";
     public static final String CONFIRM_BUTTON_XPATH = "confirm";
-    public static final String GENERAL_ACTIONS_XPATH = "GeneralInfo";
+    public static final String GENERAL_ACTIONS_INFO = "GeneralInfo";
     public static final String LOGIN_PAGE = "Login";
     public static final String REGISTER_PAGE = "RegisterPatient";
     public static final String HOME_PAGE = "HomePage";

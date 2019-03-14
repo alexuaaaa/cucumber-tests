@@ -22,6 +22,7 @@ public class PatientPageObjs {
         patientPageMap.put("Family", "FAMILY");
         patientPageMap.put("Conditions", "CONDITIONS");
         patientPageMap.put("Allergies", "ALLERGIES");
+        patientPageMap.put("General_Action", "General Actions");
     }
 
     public static String findLocator(String elementName) {

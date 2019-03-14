@@ -11,8 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import static cucumber.Asserter.asserterGetButtonDisplayed;
-import static cucumber.Asserter.asserterPages;
+import static cucumber.Asserter.*;
 import static cucumber.Base.*;
 import static cucumber.Constants.*;
 import static cucumber.pageobjs.PatientPageObjs.GENERAL_ACTION;
@@ -22,6 +21,7 @@ import static org.testng.Assert.assertTrue;
 public class RegisterPatientThenStepsDef implements En {
 
     private ConcurrentHashMap<String, String> mapFromDataTables;
+    public static final String GENERAL_ACTIONS = "General_Action";
 
     @AfterStep("@RegisterPatient_Test1")
     public void after() {
@@ -117,16 +117,17 @@ public class RegisterPatientThenStepsDef implements En {
         And("^Page With User Information will appear$", () -> {
             waitForElementToLocate(GENERAL_ACTION);
 
-            assertThat(getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_XPATH)).isDisplayed());
+            assertThat(getElementType(getLocator(getCurrentPage(), GENERAL_ACTIONS_INFO)).isDisplayed());
+            asserterVerifyFields(GENERAL_ACTIONS_INFO, GENERAL_ACTIONS);
         });
 
         And("^The page contains the following data$", (DataTable data) -> {
             final List<Map<String, String>> content = data.asMaps(String.class, String.class);
-
             final String url = getDriver().getPageSource();
 
             for (Map<String, String> row : content) {
                 String locator = getLocator(getCurrentPage(), row.get("Value"));
+
                 assertThat(url.contains(locator)).isTrue();
             }
         });

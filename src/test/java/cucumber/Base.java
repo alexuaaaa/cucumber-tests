@@ -3,12 +3,10 @@ package cucumber;
 import cucumber.runner.RunnerTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Method;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Base extends RunnerTest {
@@ -23,7 +21,15 @@ public class Base extends RunnerTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return locator;
+    }
+
+    static String getPageSource() {
+        String pageSource;
+        pageSource = getDriver().getPageSource();
+
+        return pageSource;
     }
 
     public static WebElement getElementType(String locator) {
@@ -84,14 +90,14 @@ public class Base extends RunnerTest {
     }
 
     public static void sendElementActionClickToBrowser(String... element) {
-        for (int i = 0; i < element.length; i++) {
-            getElementType(getLocator(getCurrentPage(), element[i])).click();
+        for (String i : element) {
+            getElementType(getLocator(getCurrentPage(), i)).click();
         }
     }
 
     public static void getElementTypeByLocator(String... elementType) {
-        for (int i = 0; i < elementType.length; i++) {
-            getElementType(elementType[i]).click();
+        for (String i : elementType) {
+            getElementType(i).click();
         }
     }
 

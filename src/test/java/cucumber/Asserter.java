@@ -1,7 +1,5 @@
 package cucumber;
 
-import org.openqa.selenium.WebElement;
-
 import static cucumber.Base.*;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
@@ -15,25 +13,21 @@ public class Asserter {
     public static void asserterDisplayedHomeButtons() {
         assertThat(getElementType(getLocator(getCurrentPage(), "FindPatientRecord")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "ActiveVisits")).isDisplayed());
-        // assertThat(getElementType(getLocator(getCurrentPage(), "AppointmentScheduling")).isDisplayed()).withFailMessage("Button not present in HomePage");
         assertThat(getElementType(getLocator(getCurrentPage(), "Reports")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "DataManagement")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "SystemAdministration")).isDisplayed());
         assertThat(getElementType(getLocator(getCurrentPage(), "RegisterPatient")).isDisplayed());
     }
 
-    public static void asserterVerifyFields(String field, String value) {
-        WebElement element = getElementType(getLocator(getCurrentPage(), value));
-        String locator = getLocator(getCurrentPage(), value);
-
-        assertThat(getCurrentPage().contains(value)).isTrue();
-        assertThat(element).isNotNull();
-        assertThat(element.isDisplayed());
+    public static void asserterVerifyFields(String... value) {
+        for (String i : value) {
+            assertThat(getPageSource().contains(getLocator(getCurrentPage(), i))).isTrue();
+        }
     }
 
     public static void asserterGetButtonDisplayed(String... element) {
-        for (int i = 0; i < element.length; i++) {
-            assertThat(getElementType(getLocator(getCurrentPage(), element[i])).isDisplayed()).isTrue().withFailMessage("button appear");
+        for (String i : element) {
+            assertThat(getElementType(getLocator(getCurrentPage(), i)).isDisplayed()).isTrue().withFailMessage("button appear");
         }
     }
 }
