@@ -36,6 +36,6 @@ Feature: Register a patient
       | HEALTH_TREND_SUMMARY | HealthTrend     |
       | WEIGHT_GRAPH         | WeightGraph     |
 #      | APPOINTMENTS         | Appointment     |
-      | FAMILY               | Family          |
+      | FAMILY               | Familyy         |
       | CONDITIONS           | Conditions      |
       | ALLERGIES            | Allergies       |

@@ -128,7 +128,7 @@ public class RegisterPatientThenStepsDef implements En {
             for (Map<String, String> row : content) {
                 String locator = getLocator(getCurrentPage(), row.get("Value"));
 
-                assertThat(url.contains(locator)).isTrue();
+                assertThat(url.contains(locator)).isTrue().withFailMessage("Values from tables are not present in page");
             }
         });
     }
