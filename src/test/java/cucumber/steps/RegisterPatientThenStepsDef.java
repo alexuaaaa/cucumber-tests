@@ -21,7 +21,7 @@ import static org.testng.Assert.assertTrue;
 public class RegisterPatientThenStepsDef implements En {
 
     private ConcurrentHashMap<String, String> mapFromDataTables;
-    public static final String GENERAL_ACTIONS = "General_Action";
+    private static final String GENERAL_ACTIONS = "General_Action";
 
     @AfterStep("@RegisterPatient_Test1")
     public void after() {

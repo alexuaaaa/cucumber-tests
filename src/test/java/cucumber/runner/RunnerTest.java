@@ -12,6 +12,8 @@ import org.testng.annotations.*;
 
 import java.net.URL;
 
+import static org.openqa.selenium.Platform.WINDOWS;
+
 @CucumberOptions(
         features = "src/test/resources/features",/*location of the features provided*/
         glue = {"cucumber.steps", "cucumber.config"},/*means the package where step definitions are set*/
@@ -54,30 +56,21 @@ public class RunnerTest {
 
     private static void getSeleniumGridCapabilities(String browserType, String platform, String node) throws Exception {
         RemoteWebDriver driver = null;
-        DesiredCapabilities capability = null;
+        DesiredCapabilities capability;
 
-        if (browserType.equals("chrome")) {
+        if (browserType.equals("chrome") && platform.equals("windows")) {
             capability = DesiredCapabilities.chrome();
             capability.setBrowserName("chrome");
-            capability.setPlatform(Platform.extractFromSysProperty(platform));
+            capability.setPlatform(WINDOWS);
 
             driver = new RemoteWebDriver(new URL(node + "/wd/hub"), capability);
 
-        } else if (browserType.equals("firefox")) {
+        } else if (browserType.equals("firefox") && platform.equals("windows")) {
             capability = DesiredCapabilities.firefox();
             capability.setBrowserName("firefox");
+            capability.setPlatform(WINDOWS);
 
             driver = new RemoteWebDriver(new URL(node + "/wd/hub"), capability);
-        }
-
-        if (platform.equals("windows")) {
-            capability.setPlatform(org.openqa.selenium.Platform.WINDOWS);
-        } else if (platform.equals("XP")) {
-            capability.setPlatform(org.openqa.selenium.Platform.XP);
-        } else if (platform.equals("Linux")) {
-            capability.setPlatform(org.openqa.selenium.Platform.LINUX);
-        } else {
-            capability.setPlatform(org.openqa.selenium.Platform.ANY);
         }
 
         setWebDriver(driver);
